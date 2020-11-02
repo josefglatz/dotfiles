@@ -15,20 +15,21 @@ if [[ ! -f "$DOTFILES_FILE_EXT" ]]; then
 	echo "\nopen ~/.extra\n\nedit the file and run this script again!"
 	exit
 else
-	echo "\n\n Sourcing ~/.extra file"
+	echo "\n Sourcing ~/.extra file"
 	source ~/.extra
 fi
 
 
 # Update Homebrew recipes
+echo "\nRun brew update first"
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
+echo "\nTake care of homebrew/bundle and run installation process for\n- brew formula\n- brew cask\n- whalebrew\n- mas"
 brew tap homebrew/bundle
 brew bundle
 
 # Inform about not installable applications
-echo ""
 echo "obdev Little Snitch for Catalina needs to be installed manually https://obdev.at/downloads/littlesnitch/LittleSnitch-4.6.dmg"
 echo "obdev Little Snitch for Big Sur needs to be installed manually https://obdev.at/downloads/littlesnitch/LittleSnitch-5.0.dmg"
 echo ""
