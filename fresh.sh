@@ -43,3 +43,6 @@ ${BREW_PREFIX}/bin/composer global require \
 	davidrjonas/composer-lock-diff
 
 # @TODO: make mercari/composer-diff-plugin work again with composer 2
+
+# Symlink the Mackup config file to the home directory
+ln -snf $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
