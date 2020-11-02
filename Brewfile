@@ -95,7 +95,7 @@ brew "git-quick-stats"
 brew "git-review" # Gerrit tools
 brew "github-release"
 brew "gnu-getopt"
-brew "gnu-sed"
+brew "gnu-sed", args: ["with-default-names"]
 brew "gnu-tar"
 brew "gnupg2"
 brew "gnutls"
@@ -158,16 +158,25 @@ brew "lolcat" # rainbow colored cat command
 # Development
 brew "aha"
 brew "awscli"
+brew "sqlmap"
+brew "tcpflow"
+brew "tcptrace"
+brew "bfg" # Remove large files or passwords from Git history like git-filter-branch
+brew "hashpump" # Tool to exploit hash length extension attack
 brew "box" # Fast, zero config application bundler with PHARs
 brew "composer"
+brew "binwalk" # Searches a binary image for embedded files and executable code
 brew "ddev"
+brew "john" # Featureful UNIX password cracker
 brew "nvm"
+brew "knock" # check knocking on open ports
 #brew "freetds" # MSSQL libs to talk to MS SQL Servers and sybase DBs
 brew "hcloud" # Hetzner cloud
 brew "highlight" # Convert source code to formatted text with syntax eighlighting
 brew "httpie"
 brew "httrack"
 brew "icdiff"
+brew "rename"
 brew "imagemagick"
 brew "imageoptim-cli"
 brew "jpegoptim"
@@ -211,6 +220,7 @@ brew "ultralist" # ToDo list on CLI
 brew "yarn"
 brew "webp"
 brew "xmlto"
+brew "openssh"
 
 # Apps
 cask "1password"
