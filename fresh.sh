@@ -39,6 +39,7 @@ echo ""
 # Install global composer packages
 ${BREW_PREFIX}/bin/composer global require \
 	pyrech/composer-changelogs \
-	mercari/composer-diff-plugin \
 	bramus/mixed-content-scan \
 	davidrjonas/composer-lock-diff
+
+# @TODO: make mercari/composer-diff-plugin work again with composer 2
