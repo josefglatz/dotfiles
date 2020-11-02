@@ -1,0 +1,10 @@
+# This file is used for dotfiles repo from Josef Glatz
+# Not in the repository, to prevent sharing private stuff
+# This file will be sourced along with the other files
+
+GIT_AUTHOR_NAME="Your Name"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="your@mail.address"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
