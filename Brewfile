@@ -158,6 +158,7 @@ brew "lolcat" # rainbow colored cat command
 # Development
 brew "aha"
 brew "awscli"
+brew "brew-php-switcher"
 brew "sqlmap"
 brew "tcpflow"
 brew "tcptrace"
