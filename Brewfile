@@ -167,6 +167,9 @@ brew "httrack"
 brew "icdiff"
 brew "imagemagick"
 brew "imageoptim-cli"
+brew "jpegoptim"
+brew "optipng"
+brew "svgo"
 brew "make"
 brew "mkcert"
 brew "node"
@@ -208,6 +211,7 @@ brew "xmlto"
 
 # Apps
 cask "1password"
+cask "1password-cli"
 cask "alfred"
 cask "aircrack-ng"
 cask "bartender"
@@ -216,6 +220,8 @@ cask "chromedriver"
 cask "chromium"
 #cask "carbon-copy-cloner"
 cask "dash"
+cask "dbngin" # UI for running local databases in macOS
+cask "discord"
 cask "day-o"
 cask "devdocs" # Like dash but free
 cask "dropbox"
@@ -223,12 +229,15 @@ cask "docker" # Docker Desktop / for Mac
 cask "elgato-control-center"
 cask "elgato-game-capture-hd"
 cask "fing-cli"
+cask "firefox"
+cask "firefox-developer-edition"
 cask "fontforge"
 cask "github" # GitHub Desktop app
 cask "go64" # Check for 32/64bit apps on your macOS system
 cask "google-chrome"
 cask "google-cloud-sdk"
 cask "handbrake"
+cask "gpg-suite" # (licenense needed)
 cask "imagealpha" # UI based image compressing tool (pngquant)
 cask "java"
 cask "jetbrains-toolbox"
@@ -269,10 +278,20 @@ cask "whatsize" # (license needed)
 
 
 # Quicklook
-
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "quicklook-csv"
+cask "qlstephen"
 
 # Fonts
-
+cask "font-lato"
+cask "font-open-sans"
+cask "font-roboto"
+cask "font-source-code-pro-for-powerline"
+cask "font-source-code-pro"
+cask "font-source-sans-pro"
+cask "font-source-serif-pro"
 
 # Mac App Store (Account a*@*.com)
 mas "Airmail 4", id: 918858936
