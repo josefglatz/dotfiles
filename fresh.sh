@@ -7,6 +7,8 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
+BREW_PREFIX=$(brew --prefix)
+
 # Source or add ~/.extra file for local ENV vars and other not present stuff in dotfiles repo
 DOTFILES_FILE_EXT=~/.extra
 if [[ ! -f "$DOTFILES_FILE_EXT" ]]; then
@@ -33,3 +35,10 @@ brew bundle
 echo "obdev Little Snitch for Catalina needs to be installed manually https://obdev.at/downloads/littlesnitch/LittleSnitch-4.6.dmg"
 echo "obdev Little Snitch for Big Sur needs to be installed manually https://obdev.at/downloads/littlesnitch/LittleSnitch-5.0.dmg"
 echo ""
+
+# Install global composer packages
+${BREW_PREFIX}/bin/composer global require \
+	pyrech/composer-changelogs \
+	mercari/composer-diff-plugin \
+	bramus/mixed-content-scan \
+	davidrjonas/composer-lock-diff
