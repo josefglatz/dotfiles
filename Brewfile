@@ -95,7 +95,7 @@ brew "git-quick-stats"
 brew "git-review" # Gerrit tools
 brew "github-release"
 brew "gnu-getopt"
-brew "gnu-sed", args: ["with-default-names"]
+brew "gnu-sed"
 brew "gnu-tar"
 brew "gnupg2"
 brew "gnutls"
