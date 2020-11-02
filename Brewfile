@@ -313,7 +313,6 @@ mas "Screens 4", id: 1224268771
 mas "SMTP Test", id: 791001975
 mas "SnippetsLab", id: 1006087419
 mas "The Archive Browser", id: 510232205
-mas "Uberlayer", id: 510139938
 mas "Versatil Markdown", id: 997373210
 mas "WhatsApp", id: 1147396723
 mas "xScope", id: 889428659
