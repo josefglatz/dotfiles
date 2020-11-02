@@ -7,6 +7,19 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
+# Source or add ~/.extra file for local ENV vars and other not present stuff in dotfiles repo
+DOTFILES_FILE_EXT=~/.extra
+if [[ ! -f "$DOTFILES_FILE_EXT" ]]; then
+	echo "\nPlease adjust newly added file template ~/.extra to your needs"
+	cp ./Templates/home/.extra ~/.extra
+	echo "\nopen ~/.extra\n\nedit the file and run this script again!"
+	exit
+else
+	echo "\n\n Sourcing ~/.extra file"
+	source ~/.extra
+fi
+
+
 # Update Homebrew recipes
 brew update
 
