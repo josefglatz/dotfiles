@@ -46,3 +46,7 @@ ${BREW_PREFIX}/bin/composer global require \
 
 # Symlink the Mackup config file to the home directory
 ln -snf $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+
+# Set macOS preferences
+# We will run this last because this will reload the shell
+source .macos
