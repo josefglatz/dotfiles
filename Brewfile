@@ -16,11 +16,8 @@ tap "garfieldius/t3ll"
 
 #whalebrew "whalebrew/ansible"
 #whalebrew "whalebrew/youtube-dl"
-whalebrew "whalebrew/pygmentize"
-whalebrew "whalebrew/ab"
+#whalebrew "whalebrew/ab"
 #whalebrew "whalebrew/shellcheck"
-whalebrew "whalebrew/unrar"
-whalebrew "whalebrew/par2"
 
 # Binaries (common)
 brew "whalebrew" # https://github.com/whalebrew/whalebrew
@@ -28,10 +25,14 @@ brew "mas" # command line interface for the Mac App Store. Designed for scriptin
 brew "ack" # Replacement for 99% of the uses of grep
 brew "coreutils" # Those that come with macOS are outdated @TODO: make coreutils available in PATH
 brew "ffmpeg"
+brew "par2"
+cask "xquartz" # dependency for diff-pdf
+brew "unrar"
 brew "asciinema" # Record your terminal
 #brew "autojump" # Older alternative to fasd and other alternative to z.sh
 brew "gh" # Official GitHub CLI
 brew "wget"
+brew "pygments"
 brew "multitail" # Like tail for multiple log files
 brew "tcpdump"
 brew "ngrep" # Network packet analyzer
@@ -86,7 +87,7 @@ brew "git-extras"
 brew "git-delta"
 brew "git-gerrit"
 brew "git-plus"
-brew "git-recent"
+#brew "git-recent" # also part of git-plus
 #brew "git-standup" # also part of git-extras
 brew "git-lfs"
 brew "git-quick-stats"
@@ -143,13 +144,13 @@ brew "zsh-lovers"
 brew "zsh-syntax-highlighting"
 
 # Unnecessary funny
+brew "sl" # Prints a steam locomotive if you type sl instead of ls
 brew "asciiquarium"
 brew "catimg"
 brew "cmatrix"
 brew "cowsay"
 brew "figlet" # Banner-like program prints strings as ASCII art
 brew "fortune"
-whalebrew "whalebrew/sl" # steam locomotive
 brew "lolcat" # rainbow colored cat command
 
 # Development
@@ -213,7 +214,6 @@ brew "xmlto"
 cask "1password"
 cask "1password-cli"
 cask "alfred"
-cask "aircrack-ng"
 cask "bartender"
 cask "calibre"
 cask "chromedriver"
@@ -235,11 +235,9 @@ cask "fontforge"
 cask "github" # GitHub Desktop app
 cask "go64" # Check for 32/64bit apps on your macOS system
 cask "google-chrome"
-cask "google-cloud-sdk"
 cask "handbrake"
 cask "gpg-suite" # (licenense needed)
 cask "imagealpha" # UI based image compressing tool (pngquant)
-cask "java"
 cask "jetbrains-toolbox"
 cask "jasper" # GitHub issue reader GUI
 cask "ksdiff" # Kaleidoscope helper because I've purchased it via App Store
@@ -247,7 +245,7 @@ cask "little-snitch" # personal firewall (license needed)
 cask "macdown" # free markdown UI editor
 cask "macpar-deluxe" # repair tool for rar archives (for my photo archives)
 cask "mark-text" # free markdown UI editor (advanced)
-cask "mkvtoolnix-app"
+cask "mkvtoolnix"
 cask "mkvtools"
 cask "nordvpn"
 #cask "onedrive" # Microsoft OneDrive
