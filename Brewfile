@@ -242,7 +242,7 @@ cask "imagealpha" # UI based image compressing tool (pngquant)
 cask "jetbrains-toolbox"
 cask "jasper" # GitHub issue reader GUI
 cask "ksdiff" # Kaleidoscope helper because I've purchased it via App Store
-cask "little-snitch" # personal firewall (license needed)
+#cask "little-snitch" # personal firewall (license needed)
 cask "macdown" # free markdown UI editor
 cask "macpar-deluxe" # repair tool for rar archives (for my photo archives)
 cask "mark-text" # free markdown UI editor (advanced)
