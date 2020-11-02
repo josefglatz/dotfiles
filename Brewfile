@@ -25,6 +25,7 @@ brew "mas" # command line interface for the Mac App Store. Designed for scriptin
 brew "ack" # Replacement for 99% of the uses of grep
 brew "coreutils" # Those that come with macOS are outdated @TODO: make coreutils available in PATH
 brew "ffmpeg"
+brew "svn"
 brew "par2"
 cask "xquartz" # dependency for diff-pdf
 brew "unrar"
