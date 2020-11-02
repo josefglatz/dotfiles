@@ -220,7 +220,6 @@ brew "ultralist" # ToDo list on CLI
 brew "yarn"
 brew "webp"
 brew "xmlto"
-brew "openssh"
 
 # Apps
 cask "1password"
