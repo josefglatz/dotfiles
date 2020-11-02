@@ -143,6 +143,7 @@ brew "zsh-autosuggestions" # Fish-like fast/unobtrusive autosuggestions for zsh.
 brew "zsh-history-substring-search"
 brew "zsh-lovers"
 brew "zsh-syntax-highlighting"
+brew "automake"
 
 # Unnecessary funny
 brew "sl" # Prints a steam locomotive if you type sl instead of ls
@@ -221,6 +222,8 @@ cask "chromedriver"
 cask "chromium"
 #cask "carbon-copy-cloner"
 cask "dash"
+cask "iterm2-beta"
+cask "screens-connect"
 cask "dbngin" # UI for running local databases in macOS
 cask "discord"
 cask "day-o"
