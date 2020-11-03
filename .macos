@@ -649,6 +649,25 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+# Enable Proxy Icon in Title Bar
+defaults write com.googlecode.iterm2 EnableProxyIcon -bool true
+
+defaults write com.googlecode.iterm2 HapticFeedbackForEsc -bool false
+defaults write com.googlecode.iterm2 HideScrollbar -bool false
+defaults write com.googlecode.iterm2 HideTab -bool true
+defaults write com.googlecode.iterm2 IRMemory -int 4
+defaults write com.googlecode.iterm2 PreserveWindowSizeWhenTabBarVisibilityChanges -bool false
+defaults write com.googlecode.iterm2 SoundForEsc -bool false
+defaults write com.googlecode.iterm2 StatusBarPosition -int 1
+defaults write com.googlecode.iterm2 UseBorder -bool false
+defaults write com.googlecode.iterm2 VisualIndicatorForEsc -bool false
+
+echo "\n# iTerm:\n\n- Please set the Key Mapping manually:\nOpen Preferences \n -> Tab Profiles \n  -> Buttonbar-Tab Keys \n   -> Presets.. \n    -> Select >Natural Text Editing<\n\n"
+open -a "iTerm"
+echo "When you're done press any key! The configuration/install process will then be continued"
+read
+
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
