@@ -826,6 +826,14 @@ if [[ -z "${APP_TEXTEXPANDER_LASTNAME}" ]]; then
 fi
 
 ###############################################################################
+# PLIST Editor (mas)                                                          #
+###############################################################################
+
+defaults write com.vladbadea.plisteditor NSNavLastRootDirectory -string "~/Library/Preferences"
+defaults write com.vladbadea.plisteditor PLEExpandAllItemsWhenOpeningAFile -bool true
+defaults write com.vladbadea.plisteditor PLEUseAlternatingRowBackgroundColors -bool true
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
