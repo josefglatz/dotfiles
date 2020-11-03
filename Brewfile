@@ -298,7 +298,7 @@ cask "qlcolorcode"
 cask "qlmarkdown"
 cask "quicklook-json"
 cask "quicklook-csv"
-cask "qlstephen"
+#cask "qlstephen" # quicklook plugin deactivated due to missing developer cert on Catalina
 
 # Fonts
 cask "font-lato"
