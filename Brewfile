@@ -155,6 +155,9 @@ brew "figlet" # Banner-like program prints strings as ASCII art
 brew "fortune"
 brew "lolcat" # rainbow colored cat command
 
+# System
+cask "onyx" # Free system maintainance GUI
+
 # Development
 brew "aha"
 brew "awscli"
