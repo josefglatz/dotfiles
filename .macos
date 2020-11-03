@@ -798,6 +798,22 @@ end tell
 EOD
 
 ###############################################################################
+# TextExpander                                                                #
+###############################################################################
+
+defaults write com.smileonmymac.textexpander "Hide Dock Icon" -bool true
+defaults write com.smileonmymac.textexpander welcomeVisible -bool false
+if [[ -z "${APP_TEXTEXPANDER_EMAIL}" ]]; then
+  defaults write com.smileonmymac.textexpander offlineUserEmail -string "$APP_TEXTEXPANDER_EMAIL"
+fi
+if [[ -z "${APP_TEXTEXPANDER_FIRSTNAME}" ]]; then
+  defaults write com.smileonmymac.textexpander offlineUserFirstName -string "$APP_TEXTEXPANDER_FIRSTNAME"
+fi
+if [[ -z "${APP_TEXTEXPANDER_LASTNAME}" ]]; then
+  defaults write com.smileonmymac.textexpander offlineUserLastName -string "$APP_TEXTEXPANDER_LASTNAME"
+fi
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -822,6 +838,8 @@ for app in "Activity Monitor" \
 	"Tweetbot" \
 	"Twitter" \
 	"Flexiglass" \
+	"TextExpander Helper" \
+	"TextExpander" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done

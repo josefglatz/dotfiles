@@ -11,3 +11,7 @@ git config --global user.email "$GIT_AUTHOR_EMAIL"
 
 SYSTEM_COMPUTERNAME="Mea Mac Culpa"
 SYSTEM_HOSTNAME="maculpa"
+
+APP_TEXTEXPANDER_FIRSTNAME="Firstname"
+APP_TEXTEXPANDER_LASTNAME="Lastname"
+APP_TEXTEXPANDER_EMAIL="your@mail.address"
