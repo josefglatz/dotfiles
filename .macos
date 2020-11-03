@@ -142,8 +142,11 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.mouse UserPreferences -
 # Set sensivity of mouse
 defaults write -g com.apple.mouse.scaling -float 1.5
 
+# Enable horizontal scrolling with swiping left/right
+defaults write -g AppleEnableMouseSwipeNavigateWithScrolls -bool true
+
 # Disable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
