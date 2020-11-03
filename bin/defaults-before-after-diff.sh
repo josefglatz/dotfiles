@@ -2,8 +2,8 @@
 
 defaults read > ~/settings-before.txt
 
-echo "Toggle your setting and press any key"
-read
+    echo "Toggle your setting and press any key"
+    read
 
 defaults read > ~/settings-after.txt
 
