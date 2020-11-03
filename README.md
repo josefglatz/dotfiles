@@ -28,3 +28,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Run `fresh.sh` to start the installation
 ```
+
+---
+
+## Reference Links
+
+### prefFiles / plist
+
+* mas: 1157491961 PLIST Editor
+* https://discussions.apple.com/thread/4709713 (Use AppleScript to set nested dict's/array/values in plist files)
+* https://scriptingosx.com/2016/11/editing-property-lists/ Introduction to `plutil`
+* https://shadowfile.inode.link/blog/2018/06/advanced-defaults1-usage/ Possible explanation of writing DICT with `defaults`
+* https://support.apple.com/de-de/guide/terminal/apda49a1bb2-577e-4721-8f25-ffc0836f6997/mac Official plist dokumentation Apple

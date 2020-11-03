@@ -333,3 +333,4 @@ mas "The Archive Browser", id: 510232205
 mas "Versatil Markdown", id: 997373210
 mas "WhatsApp", id: 1147396723
 mas "xScope", id: 889428659
+mas "PLIST Editor", id: 1157491961
