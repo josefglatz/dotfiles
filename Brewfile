@@ -217,6 +217,7 @@ brew "swaks" # SMTP test tool https://www.jetmore.org/john/code/swaks/
 brew "garfieldius/t3ll/t3ll" # TYPO3 XLF file editing tool
 #brew "telnet"
 brew "testssl"
+cask "textexpander" # #productivity #license-needed #subscription-needed
 brew "the_silver_searcher"
 brew "tig"
 brew "tldr"
