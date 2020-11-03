@@ -23,8 +23,8 @@ fi
 
 
 # Update Homebrew recipes
-echo "\nRun brew update first"
-brew update
+echo "\nRun brew update and upgrade first"
+brew update && brew upgrade
 
 # Install all our dependencies with bundle (See Brewfile)
 echo "\nTake care of homebrew/bundle and run installation process for\n- brew formula\n- brew cask\n- whalebrew\n- mas"
@@ -49,4 +49,6 @@ ln -snf $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
+echo "\nRun .macos script"
 source .macos
+echo "\n\n.macos script finalized"
