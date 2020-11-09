@@ -873,6 +873,29 @@ if [[ -z "${APP_TEXTEXPANDER_LASTNAME}" ]]; then
 fi
 
 ###############################################################################
+# Divvy (mas)                                                                 #
+###############################################################################
+echo "# Divvy.app:\n\n Please start the application now and do the first time setup. (Especially Security settings Accessibility and Automation and Auto startup if you want to start on login)"
+echo "When you're done press any key! The configuration/install process will then be continued"
+read
+killall "Divvy" &> /dev/null
+
+defaults write com.mizage.Divvy enableAnimations -bool false
+defaults write com.mizage.Divvy useGlobalHotkey -bool true
+osascript <<EOD
+tell application "System Events"
+	set prefsFile to property list file "~/Library/Preferences/com.mizage.Divvy.plist"
+	tell prefsFile
+		# Set CTRL+OPTION+CMD+D als global hotkey
+		tell property list item "globalHotKey"
+			set value of property list item "keyCode" to 2
+			set value of property list item "modifiers" to 6400
+		end tell
+	end tell
+end tell
+EOD
+
+###############################################################################
 # PLIST Editor (mas)                                                          #
 ###############################################################################
 
@@ -890,6 +913,7 @@ for app in "Activity Monitor" \
 	"cfprefsd" \
 	"Contacts" \
 	"Dock" \
+	"Divvy"
 	"Finder" \
 	"Google Chrome Canary" \
 	"Google Chrome" \
