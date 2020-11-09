@@ -294,7 +294,7 @@ cask "whatsize" # (license needed)
 
 
 # Quicklook
-cask "qlcolorcode"
+#cask "qlcolorcode" # quicklook plugin deactivated due to missing developer cert on Catalina (maybe https://github.com/sbarex/SourceCodeSyntaxHighlight is an alternative)
 cask "qlmarkdown"
 cask "quicklook-json"
 cask "quicklook-csv"
