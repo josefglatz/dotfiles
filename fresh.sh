@@ -40,9 +40,8 @@ echo ""
 ${BREW_PREFIX}/bin/composer global require \
 	pyrech/composer-changelogs \
 	bramus/mixed-content-scan \
-	davidrjonas/composer-lock-diff
-
-# @TODO: make mercari/composer-diff-plugin work again with composer 2
+	davidrjonas/composer-lock-diff \
+	josefglatz/composer-diff-plugin
 
 # Symlink the Mackup config file to the home directory
 ln -snf $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
