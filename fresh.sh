@@ -66,20 +66,24 @@ ln -snf $HOME/.dotfiles/.gitignore_global $HOME/
 ln -snf $HOME/.dotfiles/.gitattributes_global $HOME/
 source ./configscripts/setup-gitconfig.sh
 
+# Set preferences by symlink for following tools
+# nano, postgresql, sqlite
+ln -snf $HOME/.dotfiles/{.nanorc,.psqlrc,.sqliterc} $HOME/
+
 # Set macOS preferences
 # We will run this last because this will reload the shell
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "\nRun .macos script"
 	source .macos
 	echo "\n\n.macos script finalized"
-fi
 
 # Finalize installation process by closing some specific processes/apps and reboot machine
-echo "\n\nPress return to close terminal app(s) and reboot the system OR press CTRL+C to stop script at this position"
-read
-for app in "Activity Monitor" \
-	"iTerm2" \
-	"Terminal"; do
-	killall "${app}" &> /dev/null
-done
-echo 'Reboot now? (y/n)' && read x && [[ "$x" == "y" ]] && /sbin/reboot;
+	echo -e "\n\nPress return to close terminal app(s) and reboot the system OR press CTRL+C to stop script at this position"
+	read
+	for app in "Activity Monitor" \
+		"iTerm2" \
+		"Terminal"; do
+		killall "${app}" &> /dev/null
+	done
+	echo 'Reboot now? (y/n)' && read x && [[ "$x" == "y" ]] && /sbin/reboot;
+fi
