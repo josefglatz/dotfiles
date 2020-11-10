@@ -964,8 +964,4 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 echo "\n\nPlease press any button restart more necessary running applications"
 read
 
-for app in "Activity Monitor" \
-	"iTerm2" \
-	"Terminal"; do
-	killall "${app}" &> /dev/null
-done
+# @TODO: run custom .macos script which is not part of dotfiles repo. Something like: If file exists ~/.extra_macos execute it at the end of $DOTFILES/.macos script

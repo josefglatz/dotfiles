@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 echo "Setting up your Mac..."
 
@@ -61,3 +61,13 @@ ln -snf $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 echo "\nRun .macos script"
 source .macos
 echo "\n\n.macos script finalized"
+
+# Finalize installation process by closing some specific processes/apps and reboot machine
+echo "\n\nPress return to close terminal app(s) and reboot the system OR press CTRL+C to stop script at this position"
+read
+for app in "Activity Monitor" \
+	"iTerm2" \
+	"Terminal"; do
+	killall "${app}" &> /dev/null
+done
+echo 'Reboot now? (y/n)' && read x && [[ "$x" == "y" ]] && /sbin/reboot;
