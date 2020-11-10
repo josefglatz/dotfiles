@@ -166,6 +166,7 @@ brew "aha"
 brew "awscli"
 brew "brew-php-switcher"
 brew "sqlmap"
+brew "sqlite"
 brew "tcpflow"
 brew "tcptrace"
 brew "bfg" # Remove large files or passwords from Git history like git-filter-branch
