@@ -70,6 +70,9 @@ source ./configscripts/setup-gitconfig.sh
 # nano, postgresql, sqlite
 ln -snf $HOME/.dotfiles/{.nanorc,.psqlrc,.sqliterc} $HOME/
 
+# Setup NVM
+source $HOME/.dotfiles/configscripts/setup-nvm.sh
+
 # Set macOS preferences
 # We will run this last because this will reload the shell
 if [[ "$OSTYPE" == "darwin"* ]]; then
