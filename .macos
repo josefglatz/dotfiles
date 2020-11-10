@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
 # Thanks to Mathias Bynens!
 # ~/.macos — https://mths.be/macos (https://github.com/mathiasbynens/dotfiles/blob/main/.macos)
 
