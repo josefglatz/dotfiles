@@ -145,6 +145,7 @@ brew "zsh-autosuggestions" # Fish-like fast/unobtrusive autosuggestions for zsh.
 brew "zsh-history-substring-search"
 brew "zsh-lovers"
 brew "zsh-syntax-highlighting"
+brew "zsh-completions"
 brew "automake"
 
 # Unnecessary funny
