@@ -71,9 +71,41 @@ ZSH_CUSTOM=$DOTFILES/zsh_custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    alias-finder
+    brew
+    chucknorris
+    colored-man-pages
+    colorize
+    command-not-found
+    common-aliases
+    composer
+    copybuffer
+    copydir
+    copyfile
+    cp
+    extract
+    fancy-ctrl-z
+    fasd
+    fzf
+    git-extras
+    gitfast
+    globalias
+    gnu-utils
+    history
+    jsontools
+    systemadmin
+    thefuck
+    tig
+    urltools
+    wd
+)
 
 source $ZSH/oh-my-zsh.sh
+
+# Enable completions
+autoload -Uz compinit && compinit
 
 # User configuration
 
@@ -101,6 +133,16 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Enable brew formula zsh-history-substring-search
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Enable brew formula zsh-autosuggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Enable brew formula zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
 # Enable brew formula zsh-completions
 if type brew &>/dev/null; then
