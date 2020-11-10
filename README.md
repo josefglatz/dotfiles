@@ -29,6 +29,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Run `./fresh.sh` to start the installation
 ```
 
+## Configuration
+
+### File `~/.extra`
+
+This file is needed to keep your private informations or credentials which must be not part of any dotfiles repository.
+
+### Folder `~/bin`
+
+This folder is added to $PATH variable. You can put there your custom executable scripts which are available through PATH variable.
+
 ---
 
 ## Reference Links
