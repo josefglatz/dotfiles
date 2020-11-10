@@ -7,6 +7,9 @@ alias ll="/usr/local/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-dire
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
 # Directories
 alias dotfiles="cd $DOTFILES"
 #alias library="cd $HOME/Library"
@@ -28,6 +31,10 @@ alias php8="docker run -it -w /data -v ${PWD}:/data:delegated --entrypoint php -
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 #alias watch="npm run watch"
+
+# XML
+# Pretty print XML (use `jq` for json):
+alias xq="xmllint --format"
 
 # Vagrant
 alias v="vagrant global-status"
