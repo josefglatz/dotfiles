@@ -223,6 +223,7 @@ brew "garfieldius/t3ll/t3ll" # TYPO3 XLF file editing tool
 brew "testssl"
 cask "textexpander" # #productivity #license-needed #subscription-needed
 brew "the_silver_searcher"
+brew "rg" # ripgrep: Search tool like grep and The Silver Searcher
 brew "tig"
 brew "tldr"
 brew "ultralist" # ToDo list on CLI
