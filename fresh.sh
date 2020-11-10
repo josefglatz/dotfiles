@@ -52,6 +52,8 @@ echo "\nDone. Now delete ~/.zshrc and symlink it to dotfiles' folder"
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 echo "\n~/.zshrc file is now symlinked to ~/.dotfiles/.zshrc\n\n"
+source ~/.zshrc
+ln -snf $HOME/.dotfiles/.bash_profile $HOME/
 
 # Symlink the Mackup config file to the home directory
 ln -snf $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
