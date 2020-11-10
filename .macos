@@ -932,6 +932,17 @@ defaults write com.vladbadea.plisteditor PLEExpandAllItemsWhenOpeningAFile -bool
 defaults write com.vladbadea.plisteditor PLEUseAlternatingRowBackgroundColors -bool true
 
 ###############################################################################
+# Day-O (cask)                                                                #
+###############################################################################
+echo "\n\n Move the clock with pressed and hold CMD to remove it from icon bar"
+echo "When you're done press any key! The configuration/install process will then be continued"
+read
+sudo xattr -r -d com.apple.quarantine /Applications/Day-O.app
+open -a "Day-O"
+echo "\nDrag the menu bar item with pressed CMD to your desired position."
+echo "When you're done press any key! The configuration/install process will then be continued"
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 

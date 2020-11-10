@@ -10,3 +10,5 @@ brew upgrade && brew cleanup
 # Composer global
 
 `composer global update --with-dependencies && composer outdated -D`
+
+# mackup backup

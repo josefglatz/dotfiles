@@ -2,6 +2,16 @@
 
 ## Installation
 
+### Before you re-install
+
+First, go through the checklist below to make sure you didn't forget anything before you wipe your hard drive.
+
+- Did you commit and push any changes/branches to your git repositories?
+- Did you remember to save all important documents from non-iCloud directories?
+- Did you save all of your work from apps which aren't synced through iCloud?
+- Did you remember to export important data from your local database?
+- Did you update mackup to the latest version and ran `mackup backup`?
+
 On a sparkling frest installation of macOS:
 
 ```
@@ -27,6 +37,12 @@ cp -n ./Templates/home/.ssh/config ~/.ssh/config
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --skip-chsh
 
 # Run `./fresh.sh` to start the installation
+
+# Restore preferences by running `mackup restore`
+
+# Restart your computer to finalize the process
+
+Your Mac is now read to use!
 ```
 
 ## Configuration
