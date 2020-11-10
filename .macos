@@ -943,6 +943,16 @@ echo "\nDrag the menu bar item with pressed CMD to your desired position."
 echo "When you're done press any key! The configuration/install process will then be continued"
 
 ###############################################################################
+# Quicklook Plugin qlmarkdown                                                 #
+###############################################################################
+DOTFILES_FILE_CASK_QLMARKDOWN=$HOME/Library/QuickLook/QLMarkdown.qlgenerator
+if [[ ! -f "$DOTFILES_FILE_CASK_QLMARKDOWN" ]]; then
+	echo "\nbrew cask qlmarkdown can not be fixed to work within Catalina. File doesn't exist."
+else
+	sudo xattr -r -d com.apple.quarantine $HOME/Library/QuickLook/QLMarkdown.qlgenerator
+fi
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
