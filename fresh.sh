@@ -42,6 +42,16 @@ ${BREW_PREFIX}/bin/composer global require \
 	bramus/mixed-content-scan \
 	davidrjonas/composer-lock-diff \
 	josefglatz/composer-diff-plugin
+echo "\nGlobal composer packages are installed. Some Infos about global composer:\n\n"
+composer --version
+composer global info -D
+
+
+# .zshrc: Remove from $HOME and symlink .zshrc from ~/.dotfiles
+echo "\nDone. Now delete ~/.zshrc and symlink it to dotfiles' folder"
+rm -rf $HOME/.zshrc
+ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+echo "\n~/.zshrc file is now symlinked to ~/.dotfiles/.zshrc\n\n"
 
 # Symlink the Mackup config file to the home directory
 ln -snf $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg

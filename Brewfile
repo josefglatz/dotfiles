@@ -46,7 +46,7 @@ brew "bzip2"
 brew "libdvdcss"
 brew "libcroco"
 brew "librsvg"
-brew "ccat" # Like cat but displays content with syntax highlighting
+brew "ccat" # Like cat but displays content with syntax highlighting (The alias is probably overriden by oh-my-zsh when using https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colorize)
 brew "cheat" # Like tldr but configurable for own environment and community driven cheatsheets @TODO: implement cheat community cheatsheets
 brew "cmake"
 brew "colordiff" # Like diff but color-highlighted
@@ -120,6 +120,7 @@ brew "moreutils" # Collection of tools that nobody wrote when UNIX was young
 brew "nmap"
 brew "osx-cpu-temp" # Show CPU temp and fan speed
 brew "prettyping"
+brew "pigz" # Parallel gzip (speed up and used by oh-my-zsh plugin extract)
 brew "pstree"
 brew "qrencode" # base for one of my Alfred workflows
 brew "rsync"
@@ -139,6 +140,7 @@ brew "youtube-dl"
 brew "readline"
 brew "todolist"
 brew "unfs3"
+brew "xz" # (used by oh-my-zsh plugin extract)
 brew "zsh-autosuggestions" # Fish-like fast/unobtrusive autosuggestions for zsh.
 brew "zsh-history-substring-search"
 brew "zsh-lovers"
