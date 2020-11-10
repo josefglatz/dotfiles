@@ -8,6 +8,7 @@ else
 	echo -e "\n$DOTFILES_FILE_GIT_CONFIG_LOCAL exists already. File will be kept."
 fi
 
+source ~/.extra
 git config --global user.name "$GIT_AUTHOR_NAME"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 git config --global core.excludesfile "~/.gitignore_global"

@@ -32,9 +32,11 @@ brew tap homebrew/bundle
 brew bundle
 
 # Inform about not installable applications
-echo "obdev Little Snitch for Catalina needs to be installed manually https://obdev.at/downloads/littlesnitch/LittleSnitch-4.6.dmg"
-echo "obdev Little Snitch for Big Sur needs to be installed manually https://obdev.at/downloads/littlesnitch/LittleSnitch-5.0.dmg"
-echo ""
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	echo "obdev Little Snitch for Catalina needs to be installed manually https://obdev.at/downloads/littlesnitch/LittleSnitch-4.6.dmg"
+	echo "obdev Little Snitch for Big Sur needs to be installed manually https://obdev.at/downloads/littlesnitch/LittleSnitch-5.0.dmg"
+	echo ""
+fi
 
 # Install global composer packages
 ${BREW_PREFIX}/bin/composer global require \
@@ -66,9 +68,11 @@ source ./configscripts/setup-gitconfig.sh
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
-echo "\nRun .macos script"
-source .macos
-echo "\n\n.macos script finalized"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	echo "\nRun .macos script"
+	source .macos
+	echo "\n\n.macos script finalized"
+fi
 
 # Finalize installation process by closing some specific processes/apps and reboot machine
 echo "\n\nPress return to close terminal app(s) and reboot the system OR press CTRL+C to stop script at this position"
