@@ -41,7 +41,11 @@ This folder is added to $PATH variable. You can put there your custom executable
 
 ### File `~/.gitconfig_local`
 
-This file can be used to add custom global git config which is not part of the dotfiles repo
+This file can be used to add custom global git config which is not part of the dotfiles repo.
+
+### File `~/.functions_local`
+
+This file can be used to add custom functions which are loaded in oh-my-zsh's custom folder in script functions.zsh.
 
 ---
 
