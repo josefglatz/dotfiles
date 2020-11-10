@@ -15,6 +15,8 @@ git config --global core.excludesfile "~/.gitignore_global"
 git config --global core.excludesfile "~/.gitattributes_global"
 git config --global include.path "$DOTFILES_FILE_GIT_CONFIG_LOCAL"
 
+git config --global core.editor nvim
+
 git config --global branch.autosetuprebase "always"
 git config --bool --global fetch.prune true
 git config --bool --global fetch.pruneTags true
