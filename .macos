@@ -912,6 +912,18 @@ end tell
 EOD
 
 ###############################################################################
+# Elgato Control Center (cask)                                                #
+###############################################################################
+echo "# Elgato Control Center.app:\n\n Please start the application now and do the first time setup."
+echo "When you're done press any key! The configuration/install process will then be continued"
+read
+killall "Elgato Control Center" &> /dev/null
+# disable automatic update check
+defaults write com.corsair.ControlCenter SUEnableAutomaticChecks -bool false
+# start application on login
+defaults write com.corsair.ControlCenter shouldLaunchOnLogin -bool true
+
+###############################################################################
 # PLIST Editor (mas)                                                          #
 ###############################################################################
 
@@ -930,6 +942,7 @@ for app in "Activity Monitor" \
 	"Contacts" \
 	"Dock" \
 	"Divvy"
+	"Elgato Control Center" \
 	"Finder" \
 	"Google Chrome Canary" \
 	"Google Chrome" \
