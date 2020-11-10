@@ -506,6 +506,10 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 defaults write com.apple.Safari.SandboxBroker ShowDevelopMenu -string -bool true
 
+# Set Default Text Encoding to UTF-8
+defaults write com.apple.Safari WebKitDefaultTextEncodingName -string 'utf-8'
+defaults write com.apple.Safari "WebKitPreferences.defaultTextEncodingName" -string 'utf-8'
+
 # Add a context menu item for showing the Web Inspector in web views
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
