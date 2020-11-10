@@ -56,6 +56,12 @@ echo "\n~/.zshrc file is now symlinked to ~/.dotfiles/.zshrc\n\n"
 # Symlink the Mackup config file to the home directory
 ln -snf $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
+# Set global GIT preferences
+echo -e "\Setup GIT config"
+ln -snf $HOME/.dotfiles/.gitignore_global $HOME/
+ln -snf $HOME/.dotfiles/.gitattributes_global $HOME/
+source ./configscripts/setup-gitconfig.sh
+
 # Set macOS preferences
 # We will run this last because this will reload the shell
 echo "\nRun .macos script"

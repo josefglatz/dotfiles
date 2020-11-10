@@ -39,6 +39,10 @@ This file is needed to keep your private informations or credentials which must 
 
 This folder is added to $PATH variable. You can put there your custom executable scripts which are available through PATH variable.
 
+### File `~/.gitconfig_local`
+
+This file can be used to add custom global git config which is not part of the dotfiles repo
+
 ---
 
 ## Reference Links
