@@ -888,6 +888,13 @@ killall "Divvy" &> /dev/null
 
 defaults write com.mizage.Divvy enableAnimations -bool false
 defaults write com.mizage.Divvy useGlobalHotkey -bool true
+defaults write com.mizage.Divvy useDefaultGrid -bool true
+# Add more cols/rows
+defaults write com.mizage.Divvy defaultColumnCount -int 8
+defaults write com.mizage.Divvy defaultRowCount -int 6
+defaults write com.mizage.Divvy lastColumnCount -int 6
+defaults write com.mizage.Divvy lastRowCount -int 6
+
 osascript <<EOD
 tell application "System Events"
 	set prefsFile to property list file "~/Library/Preferences/com.mizage.Divvy.plist"
