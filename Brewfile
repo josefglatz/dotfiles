@@ -68,6 +68,7 @@ brew "editorconfig"
 brew "emacs"
 brew "exiftool"
 brew "faac" # freeware aac audio encoder
+brew "fasd" # Fasd (pronounced similar to "fast") is a command-line productivity booster. Fasd offers quick access to files and directories for POSIX shells. (like z.sh) https://github.com/clvv/fasd#introduction
 brew "fdk-aac" # Standalone library of the Fraunhofer FDK AAC code from endroid
 brew "findutils" # Collection of GNU find, xargs, and locate
 brew "flac"
