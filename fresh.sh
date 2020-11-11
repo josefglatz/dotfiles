@@ -73,6 +73,9 @@ ln -snf $HOME/.dotfiles/{.nanorc,.psqlrc,.sqliterc} $HOME/
 # Setup NVM
 source $HOME/.dotfiles/configscripts/setup-nvm.sh
 
+# Setup BROOT
+source $HOME/.dotfiles/configscripts/setup-broot.sh
+
 # Set macOS preferences
 # We will run this last because this will reload the shell
 if [[ "$OSTYPE" == "darwin"* ]]; then
