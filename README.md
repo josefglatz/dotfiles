@@ -1,4 +1,4 @@
-# dotfiles Josef Glatz
+# dotfiles Josef Glatz (always work-in-progress due to it's nature)
 
 ## Read [this ingenious blog post about dotfiles](https://driesvints.com/blog/getting-started-with-dotfiles/) to know when it's time to start using the so called "dotfiles".
 
