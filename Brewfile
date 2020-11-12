@@ -119,6 +119,7 @@ brew "ncdu" # disk usage analyzer with an ncurses interface
 brew "neovim"
 brew "moreutils" # Collection of tools that nobody wrote when UNIX was young
 brew "nmap"
+Brew "neofetch" # System stats and welcome message #shell
 brew "osx-cpu-temp" # Show CPU temp and fan speed
 brew "prettyping"
 brew "pigz" # Parallel gzip (speed up and used by oh-my-zsh plugin extract)
