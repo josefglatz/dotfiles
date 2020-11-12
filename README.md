@@ -1,5 +1,7 @@
 # dotfiles Josef Glatz
 
+## Read [this ingenious blog post about dotfiles](https://driesvints.com/blog/getting-started-with-dotfiles/) to know when it's time to start using the so called "dotfiles".
+
 ## Installation
 
 ### Before you re-install
