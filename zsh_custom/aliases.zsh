@@ -73,4 +73,5 @@ alias push="git push"
 alias resolve="git add . && git commit --no-edit"
 alias stash="git stash -u"
 alias unstage="git restore --staged ."
+alias cdgr='cd "$(git root)" && echo "Changed directory to actual git root $(pwd)"'
 #alias wip="commit wip"
