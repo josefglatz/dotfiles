@@ -13,3 +13,7 @@ brew doctor
 `composer global update --with-dependencies && composer outdated -D`
 
 # mackup backup
+
+# Vagrant
+
+- update vagrant plugins
