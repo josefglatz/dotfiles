@@ -20,6 +20,7 @@ git config --global core.editor nvim
 git config --global branch.autosetuprebase "always"
 git config --bool --global fetch.prune true
 git config --bool --global fetch.pruneTags true
+git config --string --global init.defaultBranch "main"
 
 
 git config --bool --global submodule.recurse true
