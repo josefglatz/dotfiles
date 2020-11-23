@@ -2,6 +2,7 @@
 export DOTFILES=$HOME/.dotfiles
 # Path to your local dotfiles.
 export DOTFILES_DIRECTORY_LOCAL=$HOME/.dotfiles_local
+export DOTFILES_LOCAL=$DOTFILES_DIRECTORY_LOCAL
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH

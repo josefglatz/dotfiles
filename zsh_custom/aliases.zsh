@@ -28,7 +28,8 @@ alias pbspaces="pbpaste | expand | pbcopy"
 
 # Directories
 alias dotfiles="cd $DOTFILES"
-#alias library="cd $HOME/Library"
+alias dotfilesl="cd $DOTFILES_LOCAL"
+alias dotfileslocal="dotfilesl"
 #alias sites="cd $HOME/Sites"
 #alias lara="sites && cd laravel/"
 #alias docs="lara && cd docs/"
