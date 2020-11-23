@@ -15,5 +15,5 @@ fi
 
 php composer-setup.php --quiet --1 --filename="composer1" --install-dir="/usr/local/bin"
 RESULT=$?
-echo "$RESULT"
+echo "Exitcode: $RESULT (0, if everything seems to be OK)"
 trash composer-setup.php
