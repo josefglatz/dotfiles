@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# If you need to customize the path's please copy the file in your $DOTFILES_DIRECTORY_LOCAL/bin/
+# folder and adopt it to your needs.
+
 echo
 echo "Local Snapshots:"
 echo

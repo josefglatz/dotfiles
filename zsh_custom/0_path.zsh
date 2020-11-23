@@ -29,10 +29,15 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # Remove duplicate entries from PATH:
 PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++{if (NR > 1) printf ORS; printf $a[$1]}')
 
+# Add custom (local) bin folder to PATH
+if [[ -d "$HOME/.dotfiles_local/bin" ]]; then
+  export PATH="$HOME/.dotfiles_local/bin:$PATH"
+fi
+
 # Add .dotfiles' bin folder to PATH
-export PATH="$DOTFILES/bin:$PATH"
-# Add custom bin folder to PATH
-export PATH="$HOME/bin:$PATH"
+if [[ -d "$HOME/bin" ]]; then
+  export PATH="$DOTFILES/bin:$PATH"
+fi
 
 # Use project specific binaries before global ones
 export PATH="node_modules/.bin:vendor/bin:$PATH"

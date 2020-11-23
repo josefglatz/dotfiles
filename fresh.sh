@@ -9,6 +9,14 @@ fi
 
 BREW_PREFIX=$(brew --prefix)
 
+# Create local dotfiles directory
+DOTFILES_DIRECTORY_LOCAL=$HOME/.dotfiles_local
+if [[ ! -d "$DOTFILES_DIRECTORY_LOCAL" ]]; then
+	echo "\nCreating your local ${DOTFILES_DIRECTORY_LOCAL} directory"
+	mkdir -p $DOTFILES_DIRECTORY_LOCAL && cp -R $HOME/.dotfiles/Templates/home/.dotfiles_local/README.txt $DOTFILES_DIRECTORY_LOCAL/
+	echo "\n\nDone!"
+fi
+
 # Source or add ~/.extra file for local ENV vars and other not present stuff in dotfiles repo
 DOTFILES_FILE_EXT=~/.extra
 if [[ ! -f "$DOTFILES_FILE_EXT" ]]; then

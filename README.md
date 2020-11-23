@@ -49,13 +49,21 @@ Your Mac is now read to use!
 
 ## Configuration
 
+### Directory `~/.dotfiles_local`
+
+Acts as a container for all local dotfiles specific adoptions. It scopes most dotfiles' relevant local files which are not part of the repository.
+
 ### File `~/.extra`
 
 This file is needed to keep your private informations or credentials which must be not part of any dotfiles repository.
 
-### Folder `~/bin`
+### Folder `~/.dotfiles_local/bin`
 
 This folder is added to $PATH variable. You can put there your custom executable scripts which are available through PATH variable.
+
+### Folder `~/bin`
+
+This folder is added to $PATH variable. You can put there your custom executable scripts which are available through PATH variable. It is added in front of `~/.dotfiles_local/bin` in $PATH variable.
 
 ### File `~/.gitconfig_local`
 
