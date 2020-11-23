@@ -927,6 +927,14 @@ defaults write com.corsair.ControlCenter SUEnableAutomaticChecks -bool false
 defaults write com.corsair.ControlCenter shouldLaunchOnLogin -bool true
 
 ###############################################################################
+# FSMonitor (cask)                                                            #
+###############################################################################
+echo "\n\n# FSMonitor.app:\n\n Please start the application manually now and do the first time setup."
+echo "\n- First startup\n- Import license file from your password vault\n\n"
+echo "When you're done press enter! The configuration/install process will then be continued"
+read
+
+###############################################################################
 # PLIST Editor (mas)                                                          #
 ###############################################################################
 
