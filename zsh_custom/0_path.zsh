@@ -10,7 +10,7 @@ pathAppend() {
 export PATH="/usr/local/sbin:$PATH"
 
 # Load Composer tools
-export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$(composer global config bin-dir --absolute --quiet):$PATH"
 
 # Load Node global installed binaries
 export PATH="$HOME/.node/bin:$PATH"
