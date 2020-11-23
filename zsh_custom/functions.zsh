@@ -8,18 +8,6 @@ loadenv() {
   done < "$1"
   echo 'Loaded!'
 }
-# Source ~/.functions_local (if file exists)
-if [[ -f "$HOME/.functions_local" ]]; then
-  source "$HOME/.functions_local"
-fi
-# Source ~/.dotfiles_local/.functions_local (if file exists)
-if [[ -f "$DOTFILES_DIRECTORY_LOCAL/.functions_local" ]]; then
-  source "$HOME/.functions_local"
-fi
-# Source files in ~/.dotfiles_local/functions (if folder exists)
-if [[ -d "$DOTFILES_DIRECTORY_LOCAL/functions" ]]; then
-  for file in "$(find $DOTFILES_DIRECTORY_LOCAL/functions -maxdepth 1 -name '*.zsh' -print -quit)"; do source $file; done
-fi
 
 # broot (brew) https://dystroy.org/broot/install-br/
 # --------------------------------------------------
@@ -50,3 +38,21 @@ function br {
     rm -f "$f"
     eval "$d"
 }
+
+# Load other functions
+# ---------------------------------------------
+# E.g for overriding existing functions locally
+# which is not part of dotfiles repository
+
+# Source ~/.dotfiles_local/.functions_local (if file exists)
+if [[ -f "$DOTFILES_DIRECTORY_LOCAL/.functions_local" ]]; then
+  source "$HOME/.functions_local"
+fi
+# Source files in ~/.dotfiles_local/functions (if folder exists)
+if [[ -d "$DOTFILES_DIRECTORY_LOCAL/functions" ]]; then
+  for file in "$(find $DOTFILES_DIRECTORY_LOCAL/functions -maxdepth 1 -name '*.zsh' -print -quit)"; do source $file; done
+fi
+# Source ~/.functions_local (if file exists)
+if [[ -f "$HOME/.functions_local" ]]; then
+  source "$HOME/.functions_local"
+fi
