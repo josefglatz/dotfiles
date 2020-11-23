@@ -56,3 +56,4 @@ alias vrebuild="vagrant destroy --force && vagrant up"
 
 # Docker
 alias docker-composer="docker-compose"
+alias d-c="docker-compose"
