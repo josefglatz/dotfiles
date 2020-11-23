@@ -42,6 +42,14 @@ function br {
 # Load other functions
 # ---------------------------------------------
 # E.g for overriding existing functions locally
+function brew-upgrade-greedy {
+  echo "${YELLOW}Upgrading greedy cask \"$1\" ${RED} without any warranty!${RESET}"
+  brew upgrade --greedy $1
+}
+
+# Load other functions
+# ---------------------------------------------
+# E.g for overriding existing functions locally
 # which is not part of dotfiles repository
 
 # Source ~/.dotfiles_local/.functions_local (if file exists)
