@@ -258,10 +258,11 @@ cask "fing-cli"
 cask "firefox"
 cask "firefox-developer-edition"
 cask "fontforge"
-cask "fsmonitor" # FSMonitor is a macOS app that monitors all changes to the file system. #system 
+cask "fsmonitor" # FSMonitor is a macOS app that monitors all changes to the file system. #system #system-tool #license-needed
 cask "github" # GitHub Desktop app
 cask "go64" # Check for 32/64bit apps on your macOS system
 cask "google-chrome"
+cask "google-chrome-canary" #webdevelopment #webdesign
 cask "handbrake"
 cask "gpg-suite" # (licenense needed)
 cask "imagealpha" # UI based image compressing tool (pngquant)
