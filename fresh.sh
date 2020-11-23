@@ -48,6 +48,10 @@ echo "\nGlobal composer packages are installed. Some Infos about global composer
 composer --version
 composer global info -D
 
+# Install composer v1 standalone executable
+echo "\nInstall composer v1 executable:\n\n"
+source ./configscripts/setup-composer-v1.sh
+echo "If all went fine, the executable composer1 is available in your shell environment\n\n"
 
 # .zshrc: Remove from $HOME and symlink .zshrc from ~/.dotfiles
 echo "\nDone. Now delete ~/.zshrc and symlink it to dotfiles' folder"

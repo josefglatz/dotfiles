@@ -4,3 +4,5 @@ alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
 # run composer without defacto no memory_limit
 alias composer="php -d memory_limit=-1 $(brew --prefix)/bin/composer"
+# run standalone composer v1 executable with no memory limit
+alias composer1="php -d memory_limit=-1 /usr/bin/composer1"
