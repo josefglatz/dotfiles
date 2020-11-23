@@ -23,6 +23,10 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias displays="system_profiler SPDisplaysDataType"
 alias cpu="sysctl -n machdep.cpu.brand_string"
 alias ram="top -l 1 -s 0 | grep PhysMem"
+# Use gnu-sed instead of BSD's sed
+if test $(which gsed); then
+  alias sed="gsed"
+fi
 
 alias pbspaces="pbpaste | expand | pbcopy"
 
