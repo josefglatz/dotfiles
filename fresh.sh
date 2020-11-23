@@ -88,6 +88,11 @@ source $HOME/.dotfiles/configscripts/setup-nvm.sh
 # Setup BROOT
 source $HOME/.dotfiles/configscripts/setup-broot.sh
 
+# Setup gnu-bin symlinks (partially gBINARY symlinks)
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	source $HOME/.dotfiles/configscripts/setup-macos-gnubin-symlinks.sh
+fi
+
 # Set macOS preferences
 # We will run this last because this will reload the shell
 if [[ "$OSTYPE" == "darwin"* ]]; then
