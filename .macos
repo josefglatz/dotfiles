@@ -999,6 +999,12 @@ else
 fi
 
 ###############################################################################
+# Apache                                                                      #
+###############################################################################
+# Disable builtin httpd (to suppress regular error messages in sys log)
+sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
