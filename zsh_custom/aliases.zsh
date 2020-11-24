@@ -8,6 +8,7 @@ alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias xattr-delete="sudo xattr -r -d com.apple.quarantine"
 alias cpwd="copydir"
+alias mkdir="mkdir -p"
 alias cask="brew cask"
 alias zip="zip -x *.DS_Store -x *__MACOSX* -x *.AppleDouble*"
 # Recursively remove Apple meta files
