@@ -8,6 +8,31 @@
 
 [shell_colors.zsh for coloring shell output like print, echo](../zsh_custom/shell_colors.zsh)
 
+#### Navigation
+
+##### `fif` AKA `find-in-file` in current directory
+
+Like grep but with more fun it possible to find text in files of CWD:
+
+```bash
+fif <SEARCH_TERM>
+find-in-file <SEARCH_TERM> # alternative alias
+```
+[Found at medium.com](https://medium.com/better-programming/boost-your-command-line-productivity-with-fuzzy-finder-985aa162ba5d#e100)
+
+##### ALT-C to change to any subdirectory of CWD
+
+Built on fzf it's possible to just press ALT-C and you can use fzf's feature to select a subdirectory you want to CD.
+
+* Given you're in folder ~/.dotfiles
+* Pressing ALT-C makes it possible to start selecting a subdirectory within fzf
+
+##### `fda` AKA `find-directory-all` to search also for hidden directories
+
+```bash
+fda
+```
+
 ### Translation and Languages
 
 **Shell translation tools**
