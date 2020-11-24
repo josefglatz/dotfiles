@@ -27,6 +27,11 @@ alias ram="top -l 1 -s 0 | grep PhysMem"
 if test $(which gsed); then
   alias sed="gsed"
 fi
+# Use neovim instead of vim
+if test $(which nvim); then
+  alias vim="nvim"
+  alias vi="nvim"
+fi
 
 alias pbspaces="pbpaste | expand | pbcopy"
 
