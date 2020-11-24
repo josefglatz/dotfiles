@@ -58,6 +58,38 @@ function move-to-trash {
   fi
 }
 
+if test $(which fzf); then
+  # fh - repeat history (with fzf)
+  # ------------------------------
+  # a fuzzy finder powered history
+
+    fh() {
+      print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+    }
+
+
+  # find-in-file - usage: fif <SEARCH_TERM>
+  # ---------------------------------------
+  fif() {
+    if [ ! "$#" -gt 0 ]; then
+      echo "Need a string to search for!";
+      return 1;
+    fi
+    rg --files-with-matches --no-messages "$1" | fzf $FZF_PREVIEW_WINDOW --preview "rg --ignore-case --pretty --context 10 '$1' {}"
+  }
+  alias find-in-file="fif"
+
+  # fda - including hidden directories
+  # ---------------------------------------------
+  # https://github.com/junegunn/fzf/wiki/examples
+  fda() {
+    local dir
+    dir=$(find ${1:-.} -type d 2> /dev/null | fzf +m) && cd "$dir"
+  }
+  alias find-directory-all="fda"
+  
+fi
+
 # Load other functions
 # ---------------------------------------------
 # E.g for overriding existing functions locally
