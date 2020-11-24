@@ -33,6 +33,7 @@ if test $(which nvim); then
   alias vim="nvim"
   alias vi="nvim"
 fi
+alias e="$EDITOR"
 # Use trash instead of rm
 if test $(which trash); then
   alias trash="move-to-trash"
