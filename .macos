@@ -674,6 +674,7 @@ defaults write com.googlecode.iterm2 IRMemory -int 4
 defaults write com.googlecode.iterm2 PreserveWindowSizeWhenTabBarVisibilityChanges -bool false
 defaults write com.googlecode.iterm2 SoundForEsc -bool false
 defaults write com.googlecode.iterm2 StatusBarPosition -int 1
+defaults write com.googlecode.iterm2 TimeBetweenTips -int 604800
 defaults write com.googlecode.iterm2 UseBorder -bool false
 defaults write com.googlecode.iterm2 VisualIndicatorForEsc -bool false
 
