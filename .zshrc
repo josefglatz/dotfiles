@@ -94,7 +94,7 @@ plugins=(
     fzf
     git-extras
     gitfast
-    globalias
+    #globalias # Expands all glob expressions, subcommands and aliases (including global).
     gnu-utils
     history
     jsontools
@@ -138,6 +138,9 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Private file for environment variables outside dotfiles repository
+source $HOME/.extra
 
 # Homebrew: disables statistics that brew collects
 export HOMEBREW_NO_ANALYTICS=1 

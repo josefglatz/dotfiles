@@ -2,6 +2,9 @@
 
 cowsay "Trying to update as much as possible now ...with $(realpath $0)" | lolcat
 
+figlet -f cyberlarge "oh-my-zsh:" | lolcat
+omz update
+
 figlet -f cyberlarge "Apple:" | lolcat
 echo "List available Apple Software Updates"
 softwareupdate --list
