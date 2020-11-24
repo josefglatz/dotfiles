@@ -32,6 +32,10 @@ if test $(which nvim); then
   alias vim="nvim"
   alias vi="nvim"
 fi
+# Use trash instead of rm
+if test $(which trash); then
+  alias trash="move-to-trash"
+fi
 
 alias pbspaces="pbpaste | expand | pbcopy"
 

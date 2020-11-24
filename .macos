@@ -927,7 +927,7 @@ EOD
 # Elgato Control Center (cask)                                                #
 ###############################################################################
 echo "# Elgato Control Center.app:\n\n Please start the application now and do the first time setup."
-echo "When you're done press any key! The configuration/install process will then be continued"
+echo "When you're done press enter! The configuration/install process will then be continued"
 read
 killall "Elgato Control Center" &> /dev/null
 # disable automatic update check

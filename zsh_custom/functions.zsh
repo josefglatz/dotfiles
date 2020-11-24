@@ -39,12 +39,23 @@ function br {
     eval "$d"
 }
 
-# Load other functions
-# ---------------------------------------------
-# E.g for overriding existing functions locally
+# Homebrew Upgrade for greedy formulars/casks
+# -------------------------------------------------
+# just pass an existing homebrew formulae/cask name
 function brew-upgrade-greedy {
   echo "${YELLOW}Upgrading greedy cask \"$1\" ${RED} without any warranty!${RESET}"
   brew upgrade --greedy $1
+}
+
+# trash with information
+# ----------------------
+# wrapper for trash
+function move-to-trash {
+  if test $(which trash); then
+    echo "${YELLOW}Moving following items to 🗑 ${RESET} (trash):"
+    trash -v "$@" | column
+    echo "\n(List all trash items with command ${YELLOW}trash -l${RESET})\n"
+  fi
 }
 
 # Load other functions

@@ -7,5 +7,5 @@ defaults read > ~/settings-before.txt
 
 defaults read > ~/settings-after.txt
 
+# @TODO: use mktemp
 ksdiff ~/settings-before.txt ~/settings-after.txt
-
