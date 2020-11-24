@@ -233,6 +233,8 @@ brew "ultralist" # ToDo list on CLI
 brew "yarn"
 brew "webp"
 brew "xmlto"
+brew "vagrant-completion"
+cask "vagrant"
 
 # Apps
 cask "1password"
