@@ -88,8 +88,13 @@ source $HOME/.dotfiles/configscripts/setup-nvm.sh
 # Setup BROOT
 source $HOME/.dotfiles/configscripts/setup-broot.sh
 
+# Setup Vagrant
+source $HOME/.dotfiles/configscripts/setup-vagrant.sh
+echo "\n\nVagrant setup script finished"
+
 # Setup gnu-bin symlinks (partially gBINARY symlinks)
 if [[ "$OSTYPE" == "darwin"* ]]; then
+	echo "\n\nCreate symlinks for gnu-bin binaries"
 	source $HOME/.dotfiles/configscripts/setup-macos-gnubin-symlinks.sh
 fi
 
