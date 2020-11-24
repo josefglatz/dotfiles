@@ -119,6 +119,16 @@ g() {
   fi
 }
 
+# Use Ctrl-x,Ctrl-l to get the output of the last command
+# -------------------------------------------------------
+# Based on https://github.com/skwp/dotfiles/commit/2ad786a41b29277530ebb4c50bcb65f3971d4901
+zmodload -i zsh/parameter
+insert-last-command-output() {
+LBUFFER+="$(eval $history[$((HISTCMD-1))])"
+}
+zle -N insert-last-command-output
+bindkey "^X^L" insert-last-command-output
+
 # Load other functions
 # ---------------------------------------------
 # E.g for overriding existing functions locally

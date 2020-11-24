@@ -4,6 +4,10 @@
 
 ### Shell
 
+#### ZSH General
+
+* Ctrl-x,Ctrl-l to insert output of last command
+
 #### Colors
 
 [shell_colors.zsh for coloring shell output like print, echo](../zsh_custom/shell_colors.zsh)
