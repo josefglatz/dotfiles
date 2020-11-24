@@ -667,6 +667,9 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # Enable Proxy Icon in Title Bar
 defaults write com.googlecode.iterm2 EnableProxyIcon -bool true
 
+# Enable automatically updates since iTerm 2 is a greedy cask (app with auto_update)
+defaults write com.googlecode.iterm2 SUAutomaticallyUpdate -bool true
+
 defaults write com.googlecode.iterm2 HapticFeedbackForEsc -bool false
 defaults write com.googlecode.iterm2 HideScrollbar -bool false
 defaults write com.googlecode.iterm2 HideTab -bool true
