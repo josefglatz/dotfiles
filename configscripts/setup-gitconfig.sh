@@ -9,6 +9,8 @@ else
 fi
 
 source ~/.extra
+
+
 git config --global user.name "$GIT_AUTHOR_NAME"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 git config --global core.excludesfile "~/.gitignore_global"
@@ -20,7 +22,7 @@ git config --global core.editor nvim
 git config --global branch.autosetuprebase "always"
 git config --bool --global fetch.prune true
 git config --bool --global fetch.pruneTags true
-git config --string --global init.defaultBranch "main"
+git config --global init.defaultBranch "main"
 
 
 git config --bool --global submodule.recurse true
@@ -41,6 +43,26 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
+#
+# git Aliases
+#
+
+# 
+git config --global alias.aa 'add --all'
+git config --global alias.ap 'add --patch'
+git config --global alias.ai 'add --interactive'
+git config --global alias.fp 'push --force-with-lease' # gently force push
+# Branches
+git config --global alias.branches 'for-each-ref --sort=-committerdate --format="%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)${TAB} %(color:white)%(color:bold)%(refname:short)" refs/remotes'
+# Local branches sorted by last modified
+git config --global alias.b "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+# Find text in any commit ever
+git config --global alias.grep-all "!f(){ git rev-list --all | xargs git grep \$1; }; f"
+
+# For repos without subject body commits (vim repo, git-svn clones)
+git config --global alias.logt "log --graph --color --format=\"%C(auto)%h %d %<|(100,trunc) %s\""
+git config --global alias.logta "log --graph --color --format=\"%C(auto)%h %d %<|(100,trunc) %s\" --all"
+git config --global alias.logsa "log --graph --color --format=\"%C(auto)%h %d %<|(100,trunc) %s\" --all --simplify-by-decoration"
 # Styling
 
 # @TODO: git config: setup Kaleidoscope as default mergetool

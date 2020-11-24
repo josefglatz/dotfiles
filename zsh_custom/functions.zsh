@@ -105,6 +105,20 @@ lg()
     fi
 }
 
+# "g" alias for GIT with fallback to git status
+# --------------------------------------------------------
+# No arguments: `git status`
+# With arguments: acts like `git`
+# https://github.com/thoughtbot/dotfiles
+unalias g
+g() {
+  if [[ $# -gt 0 ]]; then
+    git "$@"
+  else
+    git status -sb
+  fi
+}
+
 # Load other functions
 # ---------------------------------------------
 # E.g for overriding existing functions locally
