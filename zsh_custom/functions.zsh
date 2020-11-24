@@ -51,9 +51,9 @@ function brew-upgrade-greedy {
 # ----------------------
 # wrapper for trash
 function move-to-trash {
-  if test $(which trash); then
+  if test $(brew --prefix)/bin/trash; then
     echo "${YELLOW}Moving following items to 🗑 ${RESET} (trash):"
-    trash -v "$@" | column
+    $(brew --prefix)/bin/trash -v "$@" | column
     echo "\n(List all trash items with command ${YELLOW}trash -l${RESET})\n"
   fi
 }
