@@ -905,19 +905,9 @@ echo "Killing TextExpander..."
 killall "TextExpander" &> /dev/null
 echo "Setup TextExpander default settings"
 defaults write com.smileonmymac.textexpander "Hide Dock Icon" -bool true
-defaults write com.smileonmymac.textexpander welcomeVisible -bool false
-if [[ -z "${APP_TEXTEXPANDER_EMAIL}" ]]; then
-  defaults write com.smileonmymac.textexpander offlineUserEmail -string "$APP_TEXTEXPANDER_EMAIL"
-fi
-if [[ -z "${APP_TEXTEXPANDER_FIRSTNAME}" ]]; then
-  defaults write com.smileonmymac.textexpander offlineUserFirstName -string "$APP_TEXTEXPANDER_FIRSTNAME"
-fi
-if [[ -z "${APP_TEXTEXPANDER_LASTNAME}" ]]; then
-  defaults write com.smileonmymac.textexpander offlineUserLastName -string "$APP_TEXTEXPANDER_LASTNAME"
-fi
 echo "If you want to login into TextExpander please start application manually and login to the service."
 echo "When you're done press enter! The configuration/install process will then be continued"
-read
+reads
 
 ###############################################################################
 # Divvy (mas)                                                                 #
