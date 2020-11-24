@@ -47,3 +47,6 @@ if test $(which tldr); then
     echo "tldr data pages finished\n\n"
 fi
 
+figlet -f cyberlarge "ZSH plugins:" | lolcat
+echo "Starting ZSH plugin updates"
+echo "ZSH-PLUGIN alias-tips" && cd $HOME/.dotfiles/zsh_custom/plugins/alias-tips && git pull

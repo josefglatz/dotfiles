@@ -92,6 +92,10 @@ source $HOME/.dotfiles/configscripts/setup-broot.sh
 source $HOME/.dotfiles/configscripts/setup-vagrant.sh
 echo "\n\nVagrant setup script finished"
 
+# Setup ZSH plugins
+source $HOME/.dotfiles/configscripts/setup-zshplugin-alias-tips.sh
+echo "\n\nZSH plugin alias-tips setup script finished"
+
 # Setup gnu-bin symlinks (partially gBINARY symlinks)
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "\n\nCreate symlinks for gnu-bin binaries"

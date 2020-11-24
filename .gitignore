@@ -1,3 +1,4 @@
 Brewfile.lock.json
 /.vscode
 /.idea
+/zsh_custom/plugins/alias-tips

@@ -103,6 +103,7 @@ plugins=(
     tig
     urltools
     wd
+    alias-tips
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -169,3 +170,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # ALT-C
 bindkey "ç" fzf-cd-widget # Bind ALT-C to interactive directory changer
+
+# ZSH plugin: alias-tips
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Hey you! You have an Alias for that: "
+export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES=(_ ll vi)
+export ZSH_PLUGINS_ALIAS_TIPS_FORCE=0 # set to 1 if you want to "learn" your aliases 
+export ZSH_PLUGINS_ALIAS_TIPS_REVEAL=1 # set to 1 if you want to see behind the scenes
+export ZSH_PLUGINS_ALIAS_TIPS_REVEAL_TEXT="Alias for: "
+export ZSH_PLUGINS_ALIAS_TIPS_REVEAL_EXCLUDES=(_ ll vi)
