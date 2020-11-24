@@ -880,7 +880,16 @@ EOD
 ###############################################################################
 # TextExpander                                                                #
 ###############################################################################
+echo "# TextExpander.app:\n\n Please start the application now and do the first time setup.\n\n(Especially Security settings:\n - Accessibility and Automation\n - and Auto startup if you want to start on login)"
+echo -e "\nPress enter to start application"
+read
+open -a "TextExpander"
 
+echo "When you're done press any key! The configuration/install process will then be continued"
+read
+echo "Killing TextExpander..."
+killall "TextExpander" &> /dev/null
+echo "Setup TextExpander default settings"
 defaults write com.smileonmymac.textexpander "Hide Dock Icon" -bool true
 defaults write com.smileonmymac.textexpander welcomeVisible -bool false
 if [[ -z "${APP_TEXTEXPANDER_EMAIL}" ]]; then
@@ -892,6 +901,9 @@ fi
 if [[ -z "${APP_TEXTEXPANDER_LASTNAME}" ]]; then
   defaults write com.smileonmymac.textexpander offlineUserLastName -string "$APP_TEXTEXPANDER_LASTNAME"
 fi
+echo "If you want to login into TextExpander please start application manually and login to the service."
+echo "When you're done press enter! The configuration/install process will then be continued"
+read
 
 ###############################################################################
 # Divvy (mas)                                                                 #
