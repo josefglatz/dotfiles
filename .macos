@@ -873,6 +873,20 @@ end tell
 EOD
 
 ###############################################################################
+# Alfred                                                                      #
+###############################################################################
+echo -e "\nDisable Shortcut for Spotlight now if you want to use CMD+Space for language switch"
+echo -e "\nOpen Systemsettings -> Keyboard -> Shortcuts (Kurzbefehle) -> Spotlight"
+echo -e "\nPress enter if you want to continue"
+read
+echo -e "\nNow configure the shortcut for switching between Input-Languages (if you have set more then one)"
+echo -e "\nChoose Apple menu > System Preferences, click Keyboard, then click Input Sources. Use keyboard shortcuts: Press Option-Control-Space bar to select the next input source in the Input menu, or Control-Space bar to select the previous input source."
+read
+open -a "Alfred 4"
+echo -e "\nPress enter if you want to continue"
+read
+
+###############################################################################
 # Google Chrome Canary (mainly used with differen profile)                    #
 ###############################################################################
 # @TODO: Add 1Password Communication Workaround and set defaults
