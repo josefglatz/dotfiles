@@ -9,6 +9,9 @@ pathAppend() {
 
 export PATH="/usr/local/sbin:$PATH"
 
+# Add dotfiles' bin folder
+export PATH="$DOTFILES/bin:$PATH"
+
 # Load Composer tools
 export PATH="$(composer global config bin-dir --absolute --quiet):$PATH"
 
@@ -36,7 +39,7 @@ fi
 
 # Add .dotfiles' bin folder to PATH
 if [[ -d "$HOME/bin" ]]; then
-  export PATH="$DOTFILES/bin:$PATH"
+  export PATH="$HOME/bin:$PATH"
 fi
 
 # Use project specific binaries before global ones
