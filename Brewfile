@@ -10,6 +10,7 @@ tap "humbug/box"
 tap "codekitchen/dinghy"
 tap "drud/ddev"
 tap "garfieldius/t3ll"
+tap "jesseduffield/lazygit/lazygit"
 
 
 # Binaries (dockerized)
@@ -191,6 +192,7 @@ brew "rename"
 brew "imagemagick"
 brew "imageoptim-cli"
 brew "jpegoptim"
+brew "lazygit" # GIT UI in Shelloids #git
 brew "optipng"
 brew "svgo"
 brew "make"

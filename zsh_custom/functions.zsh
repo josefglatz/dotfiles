@@ -90,6 +90,21 @@ if test $(which fzf); then
   
 fi
 
+# lazygit "alias" with auto cd after quiting application support
+# --------------------------------------------------------------
+# https://github.com/jesseduffield/lazygit/#changing-directory-on-exit
+lg()
+{
+    export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
+
+    lazygit "$@"
+
+    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
+            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+    fi
+}
+
 # Load other functions
 # ---------------------------------------------
 # E.g for overriding existing functions locally

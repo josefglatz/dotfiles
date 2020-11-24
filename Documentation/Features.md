@@ -33,6 +33,16 @@ Built on fzf it's possible to just press ALT-C and you can use fzf's feature to 
 fda
 ```
 
+### Development
+
+#### Shell GIT "UI" `lazygit` (`lg`)
+
+Open with `lg` or lazygit when you're in an GIT repository.
+
+More information lazygit:
+* [Introduction Video](https://youtu.be/CPLdltN7wgE)
+* [Usage](https://github.com/jesseduffield/lazygit/#usage)
+
 ### Translation and Languages
 
 **Shell translation tools**
