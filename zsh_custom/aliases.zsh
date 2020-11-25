@@ -38,6 +38,10 @@ alias e="$EDITOR"
 if test $(which trash); then
   alias trash="move-to-trash"
 fi
+if test $(which prettyping); then
+  alias ping="prettyping"
+  alias ping6="prettyping -6"
+fi
 
 alias pbspaces="pbpaste | expand | pbcopy"
 
