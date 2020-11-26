@@ -58,3 +58,15 @@ More information lazygit:
 
 * `transe` or `tre` English > German
 * `transd` or `trd` German > English
+
+## macOS
+
+### dotfiles/apps/etc.
+
+#### Function "bundleid"
+
+Search for a bundleId by app name. Handy when working with plist files, defaults, ...
+
+#### Function "whichapp"
+
+Search for an installed application by name `finder` or bundleId `com.apple.finder`. If found, the full path is returned. Also the exitcode can be used in other scripts. E.g. when running some scripts only if an app is available on your system.
