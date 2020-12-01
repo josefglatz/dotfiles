@@ -988,6 +988,20 @@ else
 	sudo xattr -r -d com.apple.quarantine $HOME/Library/QuickLook/QLMarkdown.qlgenerator
 fi
 
+
+###############################################################################
+# Snagit                                                                      #
+###############################################################################
+~/.dotfiles/bin/brew-is-cask-installed snagit
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+	echo "\n\nStarting Snagit for you."
+	open -a "$(ls /Applications/ | grep -i snagit | head -n 1)"
+	echo "\n\nPlease configure especially\n - the permissions for the app\n - activate license by login or entering serial\n - set default record path"
+	echo "\n\nWhen you're done press any key! The configuration/install process will then be continued"
+	read
+fi
+
 ###############################################################################
 # Apache                                                                      #
 ###############################################################################

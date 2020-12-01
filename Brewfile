@@ -294,6 +294,7 @@ cask "signal"
 cask "skype"
 cask "slack"
 cask "sonos"
+cask "snagit" #screencapture #license-needed #productivity #techsmith
 cask "spotify"
 cask "teamviewer"
 cask "tower"
