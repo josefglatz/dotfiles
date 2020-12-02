@@ -37,6 +37,10 @@ Built on fzf it's possible to just press ALT-C and you can use fzf's feature to 
 fda
 ```
 
+#### `cdf` AKA cd into top most macOS finder window
+
+The small function allows you via osascript to get path of top most window of Finder application.
+
 ### Development
 
 ### GIT
