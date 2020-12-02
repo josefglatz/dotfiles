@@ -55,6 +55,13 @@ More information lazygit:
 
 #### GIT aliases and functions
 
+##### `git-rename-branch`
+
+Usage: `git-rename-branch newBranchNameForCurrentLocalBranch`
+
+This command will also
+* push the new branch to origin
+* delete the old branch on origin
 
 ### Translation and Languages
 
