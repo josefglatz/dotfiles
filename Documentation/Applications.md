@@ -8,6 +8,10 @@
 
 ## Video/Audio (Streaming, Recording, Screencasts,...)
 
+### Bitfocus Companion
+
+Open Source app to have a virtual elgato streamdeck and more free functionalities around streaming.
+
 ### ChromaCam (license needed)
 
 Software based Chroma Keying Virtual Webcam for macOS.

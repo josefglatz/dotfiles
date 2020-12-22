@@ -1042,6 +1042,23 @@ fi
 
 
 ###############################################################################
+# Bitfocus Companion                                                          #
+###############################################################################
+read -p "Do you want to install Bitfocus Companion manually? (Open Source Helper Application for Streaming, Podcasting) [y/n] " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	open https://bitfocus.io/user/downloads
+	echo "\n\Now login and search for the the latest 'Companion.app' and install it manually to /Applications/ and press enter."
+	read
+	sudo xattr -r -d com.apple.quarantine /Applications/Companion.app
+	open -a "Companion.app"
+	echo "\n\nPlease press enter if you finished installing/configuring the software. The configuration/install process will then be continued"
+	read
+fi
+
+
+###############################################################################
 # Apache                                                                      #
 ###############################################################################
 # Disable builtin httpd (to suppress regular error messages in sys log)
