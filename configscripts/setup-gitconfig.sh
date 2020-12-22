@@ -43,6 +43,8 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
+git config --global push.default "upstream"   # 'git push' will push the current branch to its tracking branch. the usual default is to push all branches
+
 #
 # git Aliases
 #
