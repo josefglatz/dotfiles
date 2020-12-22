@@ -258,6 +258,7 @@ cask "dropbox"
 cask "docker" # Docker Desktop / for Mac
 cask "elgato-control-center"
 cask "elgato-game-capture-hd"
+cask "elgato-stream-deck" #stream #streaming #video #podcasting
 cask "fing-cli"
 cask "firefox"
 cask "firefox-developer-edition"
