@@ -1002,6 +1002,21 @@ if [ $RESULT -eq 0 ]; then
 	read
 fi
 
+
+###############################################################################
+# Blackmagicdesign Atem Controller Software                                   #
+###############################################################################
+read -p "Do you want to install Blackmagicdesign Atem Controller Software manually? (Hardware needed) [y/n] " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	open https://www.blackmagicdesign.com/at/support/family/atem-live-production-switchers
+	echo "\n\Now search for the latest 'ATEM Switchers x.x.x. Update' for macOS and install it manually."
+	echo "\n\nPlease press enter if you finished installing/configuring the software. The configuration/install process will then be continued"
+	read
+fi
+
+
 ###############################################################################
 # Apache                                                                      #
 ###############################################################################
