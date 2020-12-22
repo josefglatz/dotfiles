@@ -8,6 +8,10 @@
 
 ## Video/Audio (Streaming, Recording, Screencasts,...)
 
+### ChromaCam (license needed)
+
+Software based Chroma Keying Virtual Webcam for macOS.
+
 ### OBS
 
 To make the screen recording working in Catalina (Security) I had to execute `open /Applications/OBS.app/Contents/MacOS/OBS --args -picture` multiple times. First, I added Terminal.app as screen recording, and after some time I was able to enable also screen sharing for OBS.
