@@ -988,6 +988,19 @@ else
 	sudo xattr -r -d com.apple.quarantine $HOME/Library/QuickLook/QLMarkdown.qlgenerator
 fi
 
+###############################################################################
+# ChromaCam                                                                   #
+###############################################################################
+# @TODO: check homebrew availability for ChromaCam.app
+read -p "Do you want to install ChromaCam.app manually? (License needed) [y/n] " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	open https://user.chromacam.me/version-history/chromacam/mac
+	echo "\n\nPlease press enter if you want to continue configuration/install process"
+	read
+fi
+
 
 ###############################################################################
 # Snagit                                                                      #
