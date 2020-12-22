@@ -43,6 +43,17 @@ The small function allows you via osascript to get path of top most window of Fi
 
 ### Development
 
+#### TYPO3 CMS related development
+
+##### Shell functions for TYPO3
+
+* `typo3-composer-require-core-packages-in-version 10.4.10` to require existing typo3/cms-* packages in a specific version
+* `typo3-composer-update-core-packages-in-version 10.4.10` to e.g. downgrade without changing version constraints in the `composer.json` file
+
+##### Aliases for TYPO3
+
+* `typo3-composer-update-core-packages` to update all packages
+
 ### GIT
 
 #### Shell GIT "UI" `lazygit` (`lg`)
