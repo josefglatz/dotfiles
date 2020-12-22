@@ -20,7 +20,7 @@ mas upgrade
 echo "${YELLOW}Please check whether all upgrades are finished by checking manually in App Store.app.\n\nPress enter to open App Store${RESET}"
 read
 open -a "App Store"
-echo "Press enter if you're finshed updating/checking updatesin App Store.app"
+echo "Press enter if you're finshed updating/checking app updates in App Store.app"
 read
 
 figlet -f cyberlarge "Homebrew:" | lolcat
@@ -52,4 +52,4 @@ fi
 
 figlet -f cyberlarge "ZSH plugins:" | lolcat
 echo "Starting ZSH plugin updates"
-echo "ZSH-PLUGIN alias-tips" && cd $HOME/.dotfiles/zsh_custom/plugins/alias-tips && git pull
+echo "ZSH-PLUGIN alias-tips" && git --work-tree="$HOME/.dotfiles/zsh_custom/plugins/alias-tips" --git-dir="$HOME/.dotfiles/zsh_custom/plugins/alias-tips/.git" pull
