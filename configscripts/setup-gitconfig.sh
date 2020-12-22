@@ -54,6 +54,7 @@ git config --global alias.aa 'add --all'
 git config --global alias.ap 'add --patch'
 git config --global alias.ai 'add --interactive'
 git config --global alias.fp 'push --force-with-lease' # gently force push
+git config --global alias.uncommit 'reset --soft HEAD^' # go back before last commit, with files in uncommitted state
 # Branches
 git config --global alias.branches 'for-each-ref --sort=-committerdate --format="%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)${TAB} %(color:white)%(color:bold)%(refname:short)" refs/remotes'
 # Local branches sorted by last modified
