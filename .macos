@@ -1001,6 +1001,17 @@ then
 	read
 fi
 
+###############################################################################
+# Spotify                                                                     #
+###############################################################################
+~/.dotfiles/bin/brew-is-cask-installed spotify
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+	echo "\n\nStarting Spotify for you."
+  open -a "Spotify.app"
+	echo "\n\nWhen you're done press enter! The configuration/install process will then be continued"
+	read
+fi
 
 ###############################################################################
 # Snagit                                                                      #
