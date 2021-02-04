@@ -29,7 +29,7 @@ brew "ffmpeg"
 brew "svn"
 brew "par2"
 cask "xquartz" # dependency for diff-pdf
-brew "unrar"
+cask "rar" # rar archiving tool (alternative to former unrar formulae)
 brew "asciinema" # Record your terminal
 #brew "autojump" # Older alternative to fasd and other alternative to z.sh
 brew "gh" # Official GitHub CLI
@@ -120,7 +120,7 @@ brew "ncdu" # disk usage analyzer with an ncurses interface
 brew "neovim"
 brew "moreutils" # Collection of tools that nobody wrote when UNIX was young
 brew "nmap"
-Brew "neofetch" # System stats and welcome message #shell
+brew "neofetch" # System stats and welcome message #shell
 brew "osx-cpu-temp" # Show CPU temp and fan speed
 brew "prettyping"
 brew "pigz" # Parallel gzip (speed up and used by oh-my-zsh plugin extract)
@@ -276,7 +276,7 @@ cask "jasper" # GitHub issue reader GUI
 cask "ksdiff" # Kaleidoscope helper because I've purchased it via App Store
 #cask "little-snitch" # personal firewall (license needed)
 cask "macdown" # free markdown UI editor
-cask "macpar-deluxe" # repair tool for rar archives (for my photo archives)
+cask "macpar-deluxe" # repair tool for rar archives (for my photo archives) #license-needed
 cask "mark-text" # free markdown UI editor (advanced)
 cask "mkvtoolnix"
 cask "mkvtools"
