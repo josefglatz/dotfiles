@@ -10,7 +10,6 @@ tap "humbug/box"
 tap "codekitchen/dinghy"
 tap "drud/ddev"
 tap "garfieldius/t3ll"
-tap "jesseduffield/lazygit/lazygit"
 
 
 # Binaries (dockerized)
