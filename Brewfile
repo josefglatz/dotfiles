@@ -351,3 +351,4 @@ mas "Versatil Markdown", id: 997373210
 mas "WhatsApp", id: 1147396723
 mas "xScope", id: 889428659
 mas "PLIST Editor", id: 1157491961
+mas "360Player", id: 1184114594
