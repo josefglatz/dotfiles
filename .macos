@@ -1070,7 +1070,7 @@ for app in "Activity Monitor" \
 	"cfprefsd" \
 	"Contacts" \
 	"Dock" \
-	"Divvy"
+	"Divvy" \
 	"Elgato Control Center" \
 	"Finder" \
 	"Google Chrome Canary" \
@@ -1090,7 +1090,7 @@ for app in "Activity Monitor" \
 	killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect.\n\n\n"
-echo "\n\nPlease press any button restart more necessary running applications"
+echo -e "\n\nPlease press any button to continue"
 read
 
 # @TODO: run custom .macos script which is not part of dotfiles repo. Something like: If file exists ~/.extra_macos execute it at the end of $DOTFILES/.macos script
