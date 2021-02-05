@@ -43,6 +43,9 @@ if test $(which prettyping); then
   alias ping6="prettyping -6"
 fi
 
+# Workaround to allow aliases in sudo mode (A trailing space in VALUE causes the next word to be checked for alias substitution when the alias is expanded.)
+alias sudo="sudo "
+
 alias pbspaces="pbpaste | expand | pbcopy"
 
 # Directories
