@@ -7,6 +7,9 @@ export DOTFILES_LOCAL=$DOTFILES_DIRECTORY_LOCAL
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Set oh-my-zsh compfix when setting up via josefglatz/dotfiles
+ZSH_DISABLE_COMPFIX="true"
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -140,6 +143,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Private file for environment variables outside dotfiles repository
+# (can be loaded with function "loadenv $HOME/.extra" to export each variable in ~/.extra)
 source $HOME/.extra
 
 # Homebrew: disables statistics that brew collects
