@@ -825,17 +825,20 @@ defaults write com.apple.Preview com.apple.AnnotationKit.hasShadow -bool false
 ###############################################################################
 # Flexiglass.app                                                              #
 ###############################################################################
+read -p "Do you want to use and configure Flexiglass.app? [y/n] " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	echo "# Flexiglass.app:\n\n Please start the application now and do the first time setup. (Especially Security settings)"
+	echo "When you're done press any key! The configuration/install process will then be continued"
+	read
+	killall "Flexiglass" &> /dev/null
 
-echo "# Flexiglass.app:\n\n Please start the application now and do the first time setup. (Especially Security settings)"
-echo "When you're done press any key! The configuration/install process will then be continued"
-read
-killall "Flexiglass" &> /dev/null
-
-defaults write com.nulana.flexiglass zoomOnHotkeyEnabled -bool true
-defaults write com.nulana.flexiglass autodetectMoverProfile -bool false
-defaults write com.nulana.flexiglass showHelp -bool false
-defaults write com.nulana.flexiglass showIconInDock -bool false
-defaults write com.nulana.flexiglass showIconInSystemBar -bool true
+	defaults write com.nulana.flexiglass zoomOnHotkeyEnabled -bool true
+	defaults write com.nulana.flexiglass autodetectMoverProfile -bool false
+	defaults write com.nulana.flexiglass showHelp -bool false
+	defaults write com.nulana.flexiglass showIconInDock -bool false
+	defaults write com.nulana.flexiglass showIconInSystemBar -bool true
 
 osascript <<EOD
 tell application "System Events"
@@ -874,6 +877,7 @@ tell application "System Events"
 	end tell
 end tell
 EOD
+fi
 
 ###############################################################################
 # Alfred                                                                      #
@@ -964,15 +968,21 @@ defaults write com.vladbadea.plisteditor PLEUseAlternatingRowBackgroundColors -b
 ###############################################################################
 # Day-O (cask)                                                                #
 ###############################################################################
-echo "\n\n Move the clock with pressed and hold CMD to remove it from icon bar"
-echo "When you're done press any key! The configuration/install process will then be continued"
-read
-sudo xattr -r -d com.apple.quarantine /Applications/Day-O.app
-open -a "Day-O"
-echo "\nDrag the menu bar item with pressed CMD to your desired position."
-echo "When you're done press enter key! The configuration/install process will then be continued"
-read
-defaults write com.shauninman.Day-O format -string "EE '⌟'ww hh:mm"
+read -p "Do you want to use and configure Day-O.app? [y/n] " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	echo "\n\n Move the clock with pressed and hold CMD to remove it from icon bar"
+	echo "When you're done press any key! The configuration/install process will then be continued"
+	read
+	sudo xattr -r -d com.apple.quarantine /Applications/Day-O.app
+	open -a "Day-O"
+	echo "\nDrag the menu bar item with pressed CMD to your desired position."
+	echo "When you're done press enter key! The configuration/install process will then be continued"
+	read
+	defaults write com.shauninman.Day-O format -string "EEEEE'⌟'ww hh:mm"
+fi
+
 
 ###############################################################################
 # ChromaCam                                                                   #
