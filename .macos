@@ -926,18 +926,9 @@ defaults write com.mizage.Divvy defaultRowCount -int 6
 defaults write com.mizage.Divvy lastColumnCount -int 6
 defaults write com.mizage.Divvy lastRowCount -int 6
 
-osascript <<EOD
-tell application "System Events"
-	set prefsFile to property list file "~/Library/Preferences/com.mizage.Divvy.plist"
-	tell prefsFile
-		# Set CTRL+OPTION+CMD+D als global hotkey
-		tell property list item "globalHotKey"
-			set value of property list item "keyCode" to 2
-			set value of property list item "modifiers" to 6400
-		end tell
-	end tell
-end tell
-EOD
+defaults write com.mizage.Divvy globalHotKey -dict \
+	keyCode -int 2 \
+	modifiers -int 64
 
 ###############################################################################
 # Elgato Control Center (cask)                                                #
