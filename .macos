@@ -129,6 +129,17 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.forceClick -int 0
+
+# Trackpad: some of my defaults
+defaults write com.apple.driver.AppleBluetoothMultitouchTrackpad ActuateDetents -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouchTrackpad FirstClickThreshold -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouchTrackpad ForceSuppressed -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouchTrackpad SecondClickThreshold -int 0
+defaults write com.apple.driver.AppleBluetoothMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -int 2
+defaults write com.apple.preference.trackpad ForceClickSavedState -bool false
 
 # Trackpad: map bottom right corner to right-click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
