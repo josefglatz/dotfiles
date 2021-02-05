@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+
+# Check if we are in a git repository currently
+git rev-parse --is-inside-git-dir > /dev/null 2>&1
+
+# Use exit status of last command
+if [ $? -eq 0 ]
+then
+    source $HOME/.extra
+    echo "${RED}Set local GIT user to alternative values:${RESET} $GIT_ALTERNATIVE_AUTHOR_NAME <$GIT_ALTERNATIVE_AUTHOR_EMAIL>\n(Local means only this git repository)\n"
+    git config user.email "$GIT_ALTERNATIVE_AUTHOR_EMAIL"
+    git config user.name "$GIT_ALTERNATIVE_AUTHOR_NAME"
+    echo "Overview of local git configuration:"
+    git config --local -l | bat
+    exit 0
+else
+    printf "${RED}Error:${RESET} We're not in an git repository. Aborting now!" 
+    exit 1
+fi

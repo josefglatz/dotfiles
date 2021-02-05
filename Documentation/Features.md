@@ -74,6 +74,13 @@ This command will also
 * push the new branch to origin
 * delete the old branch on origin
 
+##### `git-config-local-alternative-author`
+
+Usage: `git-config-local-alternative-author` within an git repository.
+
+This command set the alternative author details (from `$HOME/.extra`) in the current git repository.
+Used for e.g. private/fun projects.
+
 ### Translation and Languages
 
 **Shell translation tools**
