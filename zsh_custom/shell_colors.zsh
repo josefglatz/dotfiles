@@ -1,3 +1,8 @@
+#!/bin/zsh
+
+# Load necessary ZSH functions
+autoload colors zsh/terminfo
+
 # Script initially found at https://pthree.org/2009/12/18/add-colors-to-your-zsh-scripts/
 if [[ "$terminfo[colors]" -gt 8 ]]; then
     colors
