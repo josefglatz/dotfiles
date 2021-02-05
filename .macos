@@ -3,7 +3,7 @@
 # Exit immediately if a command exits with a non-zero status.
 set -e
 
-# Output debug information (for debugging only)
+# Output debug information (for debugging only) (https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_03.html)
 #set -x
 
 # Thanks to Mathias Bynens!
