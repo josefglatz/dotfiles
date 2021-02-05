@@ -281,7 +281,6 @@ cask "mkvtoolnix"
 cask "mkvtools"
 cask "nordvpn"
 cask "obs" #video #streaming #chat #live
-cask "obs-virtualcam" #video #streaming #chat #live
 #cask "onedrive" # Microsoft OneDrive
 cask "paw" # API tool for Mac (license needed)
 cask "pennywise"
