@@ -4,7 +4,7 @@
 set -e
 
 # Output debug information (for debugging only) (https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_03.html)
-#set -x
+set -x
 
 # Thanks to Mathias Bynens!
 # ~/.macos — https://mths.be/macos (https://github.com/mathiasbynens/dotfiles/blob/main/.macos)
@@ -1100,7 +1100,7 @@ for app in "Activity Monitor" \
 	"TextExpander Helper" \
 	"TextExpander" \
 	"iCal"; do
-	killall "${app}" &> /dev/null
+	killall "${app}" &> /dev/null || true
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect.\n\n\n"
 echo -e "\n\nPlease press any button to continue"
