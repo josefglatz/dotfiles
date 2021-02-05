@@ -907,7 +907,7 @@ echo "Setup TextExpander default settings"
 defaults write com.smileonmymac.textexpander "Hide Dock Icon" -bool true
 echo "If you want to login into TextExpander please start application manually and login to the service."
 echo "When you're done press enter! The configuration/install process will then be continued"
-reads
+read
 
 ###############################################################################
 # Divvy (mas)                                                                 #
