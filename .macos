@@ -1058,7 +1058,9 @@ fi
 # Apache                                                                      #
 ###############################################################################
 # Disable builtin httpd (to suppress regular error messages in sys log)
-sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+if launchctl list | grep org.apache.httpd; then
+	sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+fi
 
 ###############################################################################
 # Kill affected applications                                                  #
