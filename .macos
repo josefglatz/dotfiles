@@ -882,7 +882,7 @@ fi
 ###############################################################################
 # Alfred                                                                      #
 ###############################################################################
-echo -e "\nDisable Shortcut for Spotlight now if you want to use CMD+Space for language switch"
+echo -e "# Alfred.app:\n\nDisable Shortcut for Spotlight now if you want to use CMD+Space for language switch"
 echo -e "\nOpen Systemsettings -> Keyboard -> Shortcuts (Kurzbefehle) -> Spotlight"
 echo -e "\nPress enter if you want to continue"
 read
