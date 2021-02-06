@@ -6,6 +6,12 @@
 
 * [FSMonitor](https://fsmonitor.com) FSMonitor is a macOS app that monitors all changes to the file system.
 
+### Finder Improvements
+
+#### Quicklook Plugins
+
+* webp (Cask `webpquicklook`)
+
 ## Video/Audio (Streaming, Recording, Screencasts,...)
 
 ### Bitfocus Companion
@@ -23,3 +29,4 @@ To make the screen recording working in Catalina (Security) I had to execute `op
 ### Snagit (license needed)
 
 Small screen capture software what I use next to TechSmith Camtasia.
+

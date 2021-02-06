@@ -1090,6 +1090,16 @@ if launchctl list | grep org.apache.httpd; then
 	sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist
 fi
 
+
+###############################################################################
+# Quicklook Plugin webp                                                       #
+###############################################################################
+~/.dotfiles/bin/brew-is-cask-installed webpquicklook
+if [ $RESULT -eq 0 ]; then
+	xattr -rd com.apple.quarantine ~/Library/QuickLook/WebpQuickLook.qlgenerator
+fi
+
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
