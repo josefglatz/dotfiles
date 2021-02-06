@@ -994,7 +994,7 @@ then
 	echo "\nDrag the menu bar item with pressed CMD to your desired position."
 	echo "When you're done press enter key! The configuration/install process will then be continued"
 	read
-	defaults write com.shauninman.Day-O format -string "EEEEE'⌟'ww hh:mm"
+	defaults write com.shauninman.Day-O format -string "e'⌟'ww HH:mm"
 fi
 
 
