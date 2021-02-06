@@ -121,6 +121,12 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Disable automatic text completion
+defaults write NSGlobalDomain NSAutomaticTextCompletionEnabled -bool false
+
+# Text, disable web automatic spelling correction
+defaults write NSGlobalDomain WebAutomaticSpellingCorrectionEnabled -bool false
+
 # Show battery icon with percentage info
 defaults write com.apple.menuextra.battery ShowPercent YES
 
