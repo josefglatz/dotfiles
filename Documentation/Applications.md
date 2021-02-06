@@ -11,6 +11,7 @@
 #### Quicklook Plugins
 
 * webp (Cask `webpquicklook`)
+* qlvideo (Cask `qlvideo`) with multiple video type support
 
 ## Video/Audio (Streaming, Recording, Screencasts,...)
 
