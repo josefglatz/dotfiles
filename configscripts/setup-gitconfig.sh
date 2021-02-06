@@ -14,7 +14,7 @@ source ~/.extra
 git config --global user.name "$GIT_AUTHOR_NAME"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 git config --global core.excludesfile "~/.gitignore_global"
-git config --global core.excludesfile "~/.gitattributes_global"
+git config --global core.attributesfile "~/.gitattributes_global"
 git config --global include.path "$DOTFILES_FILE_GIT_CONFIG_LOCAL"
 
 git config --global core.editor nvim
