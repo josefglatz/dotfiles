@@ -35,6 +35,12 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
+# Disable flash with system beep
+defaults write NSGlobalDomain com.apple.sound.beep.flash -bool false
+
+# Disable sound effects in macOS user interface 
+defaults write NSGlobalDomain com.apple.sound.uiaudio.enabled -bool false
+
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
 
