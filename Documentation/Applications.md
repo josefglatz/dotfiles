@@ -12,6 +12,7 @@
 
 * webp (Cask `webpquicklook`)
 * qlvideo (Cask `qlvideo`) with multiple video type support
+* qlimagesize (Cask `qlimagesize` + Cask `mdimagesizemdimporter`)
 
 ## Video/Audio (Streaming, Recording, Screencasts,...)
 
