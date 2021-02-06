@@ -2,3 +2,6 @@
 
 # Do not show lock files changes in `git diff`:
 *.lock    diff=nodiff
+*.json diff=json
+*.png diff=exif
+*.jpg diff=exif
