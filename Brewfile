@@ -292,8 +292,9 @@ cask "sequel-pro" # #dev #dev-database
 cask "sequel-ace" # community driven "successor" of sequel-pro
 cask "signal"
 #cask "sketch" # (license needed)
-cask "skype"
-cask "slack"
+cask "skype" # #video #communication #chat
+cask "zoom" # #video #communication
+cask "slack" # #video #communication #chat
 cask "sonos"
 cask "snagit" #screencapture #license-needed #productivity #techsmith
 cask "spotify"
