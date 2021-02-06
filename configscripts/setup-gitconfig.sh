@@ -28,7 +28,14 @@ git config --global init.defaultBranch "main"
 git config --bool --global submodule.recurse true
 git config --global submodule.fetchJobs 0
 
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+#git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+# Use git-delta instead of diff-so-fancy
+git config --global core.pager "delta"
+git config --global interactive.diffFilter "delta --color-only"
+git config --global delta.plus-color "#012800"
+git config --global delta.minus-color "#340001"
+git config --global delta.syntax-theme Monokai\ Extended
+
 git config --global color.ui true
 git config --bool --global diff-so-fancy.markEmptyLines true
 git config --global color.diff-highlight.oldNormal    "red bold"
