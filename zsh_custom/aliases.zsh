@@ -68,6 +68,10 @@ alias library="cd $HOME/Library"
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
 #alias watch="npm run watch"
 
+# Domains and general Web Dev
+# Convert umlautdomains to punycode
+alias punycode="idn2"
+
 # XML
 # Pretty print XML (use `jq` for json):
 alias xq="xmllint --format"

@@ -114,6 +114,7 @@ brew "pkg-config"
 brew "trash"
 brew "jq"
 brew "lame"
+brew "libidn" # command-line tool to encode/decode punycode (domains)
 brew "nativefier" # command-line tool to easily create a desktop app for any web site
 brew "ncdu" # disk usage analyzer with an ncurses interface
 brew "neovim"
