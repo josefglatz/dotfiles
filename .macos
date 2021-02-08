@@ -1101,6 +1101,15 @@ fi
 
 
 ###############################################################################
+# Quicklook Plugin qlimagesize                                                       #
+###############################################################################
+~/.dotfiles/bin/brew-is-cask-installed qlimagesize
+if [ $RESULT -eq 0 ]; then
+	xattr -d -r com.apple.quarantine ~/Library/QuickLook/qlImageSize.qlgenerator/
+fi
+
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
