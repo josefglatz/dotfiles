@@ -244,6 +244,7 @@ cask "1password"
 cask "1password-cli"
 cask "alfred"
 cask "bartender"
+cask "bettertouchtool" # Improve all your touch devices #license-needed
 cask "calibre"
 cask "chromedriver"
 cask "chromium"

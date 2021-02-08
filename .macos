@@ -1083,6 +1083,26 @@ fi
 
 
 ###############################################################################
+# BetterTouchTool                                                             #
+###############################################################################
+~/.dotfiles/bin/brew-is-cask-installed bettertouchtool
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+	sudo xattr -r -d com.apple.quarantine /Applications/BetterTouchTool.app
+	read -p "# BetterTouchTool.app: Do you want to (re-)configure BetterTouchTool.app? [y/n] " -n 1 -r
+	echo    # (optional) move to a new line
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+		echo -e "\n\nStarting BetterTouchTool.app for you."
+		open -a "BetterTouchTool.app"
+		echo -e "\n\Now setup and configure BTT and add the license!"
+		echo -e "\n\nPlease press enter if you finished installing/configuring the software. The configuration/install process will then be continued"
+		read
+	fi
+fi
+
+
+###############################################################################
 # Dropbox                                                                     #
 ###############################################################################
 ~/.dotfiles/bin/brew-is-cask-installed dropbox
