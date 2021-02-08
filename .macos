@@ -1083,6 +1083,28 @@ fi
 
 
 ###############################################################################
+# Dropbox                                                                     #
+###############################################################################
+~/.dotfiles/bin/brew-is-cask-installed dropbox
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+	sudo xattr -rd com.apple.quarantine /Applications/Dropbox.app
+	read -p "# Dropbox.app: Do you want to (re-)configure Dropbox? [y/n] " -n 1 -r
+	echo    # (optional) move to a new line
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+		echo -e "\n\nStarting Dropbox.app for you."
+		open -a "Dropbox.app"
+		echo -e "\n\Now setup and configure Dropbox!"
+		echo -e "\n\nPlease press enter if you finished installing/configuring the software. The configuration/install process will then be continued"
+		read
+		echo -e "\n\nReminder: Did you add all necessary legacy vaults on dropbox to you password manager? Please press enter if you want to continue."
+		read
+	fi
+fi
+
+
+###############################################################################
 # Apache                                                                      #
 ###############################################################################
 # Disable builtin httpd (to suppress regular error messages in sys log)
