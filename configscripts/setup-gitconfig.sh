@@ -35,6 +35,7 @@ git config --global interactive.diffFilter "delta --color-only"
 git config --global delta.plus-color "#012800"
 git config --global delta.minus-color "#340001"
 git config --global delta.syntax-theme Monokai\ Extended
+git config --global delta.line-numbers true
 
 git config --global color.ui true
 git config --bool --global diff-so-fancy.markEmptyLines true
