@@ -59,8 +59,8 @@ brew "diff-so-fancy" # better git diff tool @TODO: https://github.com/so-fancy/d
 brew "dinghy"
 #brew "docbook"
 #brew "docbook-xsl"
-#brew "docker"
-#brew "docker-compose"
+brew "docker", link: false # Install native docker next to docker.app without linking binaries
+brew "docker-compose", link: false # Install native docker-compose next to docker.app without linking binaries
 brew "docker-ls" # CLI for browsing and manipulating docker registries
 brew "docker-machine" # Create Docker hosts locally and on cloud providers
 brew "docker-machine-parallels"
