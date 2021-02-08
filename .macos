@@ -1149,6 +1149,29 @@ fi
 
 
 ###############################################################################
+# SnippetsLab (mas)                                                           #
+###############################################################################
+APPNAME=snippetslab
+APPNAMEUI=SnippetsLab.app
+
+mdfind -name $APPNAMEUI &> /dev/null
+RESULT=$?
+
+if [ $RESULT -eq 0 ]; then
+	read -p "# $APPNAMEUI: Do you want to (re-)configure $APPNAMEUI? [y/n] " -n 1 -r
+	echo    # (optional) move to a new line
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+		echo -e "\n\nStarting $APPNAMEUI for you."
+		open -a "$APPNAMEUI"
+		echo -e "\n\Now setup and configure $APPNAMEUI!"
+		echo -e "\n\nPlease press enter if you finished installing/configuring the software. Don't forget to activate the iCloud sync!\n\nThe configuration/install process will then be continued"
+		read
+	fi
+fi
+
+
+###############################################################################
 # Apache                                                                      #
 ###############################################################################
 # Disable builtin httpd (to suppress regular error messages in sys log)
