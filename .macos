@@ -1149,6 +1149,30 @@ fi
 
 
 ###############################################################################
+# Lingon X                                                                    #
+###############################################################################
+APPNAME="lingon-x"
+APPNAMEUI="Lingon X.app"
+
+~/.dotfiles/bin/brew-is-cask-installed $APPNAME
+RESULT=$?
+
+if [ $RESULT -eq 0 ]; then
+	sudo xattr -rd com.apple.quarantine /Applications/$APPNAMEUI
+	read -p "# $APPNAMEUI: Do you want to (re-)configure $APPNAMEUI? [y/n] " -n 1 -r
+	echo    # (optional) move to a new line
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+		echo -e "\n\nStarting $APPNAMEUI for you."
+		open -a "$APPNAMEUI"
+		echo -e "\n\Now setup and configure $APPNAMEUI!"
+		echo -e "\n\nPlease press enter if you finished installing/configuring the software and add the license!\n\nThe configuration/install process will then be continued"
+		read
+	fi
+fi
+
+
+###############################################################################
 # SnippetsLab (mas)                                                           #
 ###############################################################################
 APPNAME=snippetslab
