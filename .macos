@@ -1191,6 +1191,12 @@ if [ $RESULT -eq 0 ]; then
 		echo -e "\n\Now setup and configure $APPNAMEUI!"
 		echo -e "\n\nPlease press enter if you finished installing/configuring the software. Don't forget to activate the iCloud sync!\n\nThe configuration/install process will then be continued"
 		read
+		defaults write com.renfei.SnippetsLab "Preferences AutoSortFoldersAndSmartGroups" -bool true
+		defaults write com.renfei.SnippetsLab "Preferences ShowNotes" -bool true
+		defaults write com.renfei.SnippetsLab "Preferences ShowTags" -bool true
+		defaults write com.renfei.SnippetsLab SLAutomaticFormatWhenPasting -bool true
+
+		echo -e "\n\n $APPNAMEUI: If you want to enable the app on launch, please activate it in the application's preferences."
 	fi
 fi
 
