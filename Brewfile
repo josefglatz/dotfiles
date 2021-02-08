@@ -320,7 +320,6 @@ cask "qlvideo" # https://github.com/Marginal/QLVideo
 cask "webpquicklook" # quicklook plugin
 #cask "qlstephen" # quicklook plugin deactivated due to missing developer cert on Catalina
 cask "qlimagesize" # https://github.com/Nyx0uf/qlImageSize
-cask "mdimagesizemdimporter"
 
 # Fonts
 cask "font-lato"
