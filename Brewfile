@@ -280,6 +280,7 @@ cask "ksdiff" # Kaleidoscope helper because I've purchased it via App Store
 cask "macdown" # free markdown UI editor
 cask "macpar-deluxe" # repair tool for rar archives (for my photo archives) #license-needed
 cask "mark-text" # free markdown UI editor (advanced)
+cask "obsidian" # A second brain based on markdown (https://obsidian.md) #editor #markdown
 cask "mkvtoolnix"
 cask "mkvtools"
 cask "nordvpn"
