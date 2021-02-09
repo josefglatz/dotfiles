@@ -292,6 +292,7 @@ cask "obs" #video #streaming #chat #live
 cask "paw" # API tool for Mac (license needed)
 cask "pennywise"
 cask "prepros" # FE pipeline compiler (redmine abacus theme related) #projectspecific
+cask "parallels" #license-needed #virtualization #hypervisor
 cask "responsively" # Multiple browser viewports to test RWD
 cask "rightfont" # (license needed)
 cask "safari-technology-preview"
