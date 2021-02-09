@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
-defaults read > ~/settings-before.txt
+defaults read > $TMPDIR/settings-before.txt
 
     echo "Toggle your setting and press any key"
     read
 
-defaults read > ~/settings-after.txt
+defaults read > $TMPDIR/settings-after.txt
 
-# @TODO: use mktemp
-ksdiff ~/settings-before.txt ~/settings-after.txt
+ksdiff $TMPDIR/settings-before.txt $TMPDIR/settings-after.txt
