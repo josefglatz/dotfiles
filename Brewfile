@@ -1,3 +1,5 @@
+# File for the homebrew bundler system https://github.com/Homebrew/homebrew-bundle
+
 # Taps
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
