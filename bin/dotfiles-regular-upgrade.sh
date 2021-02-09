@@ -53,3 +53,10 @@ fi
 figlet -f cyberlarge "ZSH plugins:" | lolcat
 echo "Starting ZSH plugin updates"
 echo "ZSH-PLUGIN alias-tips" && git --work-tree="$HOME/.dotfiles/zsh_custom/plugins/alias-tips" --git-dir="$HOME/.dotfiles/zsh_custom/plugins/alias-tips/.git" pull
+
+
+##################################################
+# ToDos for this script
+##################################################
+
+# @TODO: Check if phpstorm script is available in $PATH (for e.g. Alfred jetbrains workflow) (normally in /usr/local/bin/)
