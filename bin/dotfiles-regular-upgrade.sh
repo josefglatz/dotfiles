@@ -60,3 +60,4 @@ echo "ZSH-PLUGIN alias-tips" && git --work-tree="$HOME/.dotfiles/zsh_custom/plug
 ##################################################
 
 # @TODO: Check if phpstorm script is available in $PATH (for e.g. Alfred jetbrains workflow) (normally in /usr/local/bin/)
+# @TODO: Check if nvm update is available https://gist.github.com/lukechilds/a83e1d7127b78fef38c2914c4ececc3c curl --silent "https://api.github.com/repos/nvm-sh/nvm/releases/latest" | jq -r .tag_name
