@@ -126,5 +126,9 @@ Session.vim
 # ----------------------------------------------------------------------------------------------
 .sass-cache
 
+# Personal
+# # --------------------------------------------------------------------------------------------
+Retrospektive.md
+
 # See other ressources for possible global gitignore
 # https://github.com/sobolevn/dotfiles/blob/master/config/gitignore
