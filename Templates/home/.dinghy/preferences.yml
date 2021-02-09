@@ -1,0 +1,13 @@
+---
+:preferences:
+  :proxy_disabled: true
+  :fsevents_disabled: false
+  :create:
+    provider: parallels
+    memory: 8192
+    cpus: 4
+    disk: 160000
+  :machine_name: dinghy
+  :dinghy_domain: docker
+  :unfs_disabled: false
+  :dns_disabled: false

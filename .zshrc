@@ -147,6 +147,8 @@ fi
 source $HOME/.extra
 # After sourcing $HOME/.extra: export only specific as environment variables for now o-o-t-b
 export GITHUB_TOKEN=$GITHUB_CLI_TOKEN
+export DINGHY_GUEST_MOUNT_DIR=$DINGHY_GUEST_MOUNT_DIR
+export DINGHY_HOST_MOUNT_DIR=$DINGHY_HOST_MOUNT_DIR
 
 # Homebrew: disables statistics that brew collects
 export HOMEBREW_NO_ANALYTICS=1 

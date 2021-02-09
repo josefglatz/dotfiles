@@ -33,3 +33,9 @@ SYSTEM_HOSTNAME="maculpa"
 
 # GitHub CLI configuration
 GITHUB_CLI_TOKEN=
+
+
+
+# DINGHY development environment configuration
+DINGHY_GUEST_MOUNT_DIR="/Volumes/cs"
+DINGHY_HOST_MOUNT_DIR="/Volumes/cs"
