@@ -145,6 +145,8 @@ fi
 # Private file for environment variables outside dotfiles repository
 # (can be loaded with function "loadenv $HOME/.extra" to export each variable in ~/.extra)
 source $HOME/.extra
+# After sourcing $HOME/.extra: export only specific as environment variables for now o-o-t-b
+export GITHUB_TOKEN=$GITHUB_CLI_TOKEN
 
 # Homebrew: disables statistics that brew collects
 export HOMEBREW_NO_ANALYTICS=1 
