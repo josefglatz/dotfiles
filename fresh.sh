@@ -85,6 +85,9 @@ ln -snf $HOME/.dotfiles/{.nanorc,.psqlrc,.sqliterc} $HOME/
 # Setup NVM
 source $HOME/.dotfiles/configscripts/setup-nvm.sh
 
+# Setup webdevops/go-sync
+source $HOME/.dotfiles/configscripts/setup-go-sync.sh
+
 # Setup BROOT
 source $HOME/.dotfiles/configscripts/setup-broot.sh
 
