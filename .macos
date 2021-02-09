@@ -1284,6 +1284,27 @@ if [ $RESULT -eq 0 ]; then
 fi
 
 ###############################################################################
+# mkcert                                                                      #
+###############################################################################
+APPNAME="mkcert"
+APPNAMEUI=""
+
+~/.dotfiles/bin/brew-is-formula-installed $APPNAME
+RESULT=$?
+
+if [ $RESULT -eq 0 ]; then
+	read -p "# $APPNAME: Do you want to (re-)configure $APPNAME? [y/n] " -n 1 -r
+	echo    # (optional) move to a new line
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+		echo -e "\n\nInstalling $APPNAME for you."
+		mkcert -install
+		echo -e "\n\nmkcert initial install process finished."
+	fi
+fi
+
+
+###############################################################################
 # Parallels                                                                   #
 ###############################################################################
 APPNAME="parallels"
@@ -1305,7 +1326,6 @@ if [ $RESULT -eq 0 ]; then
 		defaults write "com.parallels.Parallels Desktop" "Application preferences.Download updates automatically" -bool false
 	fi
 fi
-
 
 ###############################################################################
 # SnippetsLab (mas)                                                           #
@@ -1378,6 +1398,8 @@ for app in "Activity Monitor" \
 	"Finder" \
 	"Google Chrome Canary" \
 	"Google Chrome" \
+	"Firefox" \
+	"Firefox Developer Edition" \
 	"Mail" \
 	"Messages" \
 	"Photos" \
