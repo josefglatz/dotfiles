@@ -182,7 +182,6 @@ brew "composer"
 brew "binwalk" # Searches a binary image for embedded files and executable code
 brew "ddev"
 brew "john" # Featureful UNIX password cracker
-brew "nvm"
 brew "knock" # check knocking on open ports
 #brew "freetds" # MSSQL libs to talk to MS SQL Servers and sybase DBs
 cask "figma" # Figma Design tool application #webdesign #appdesign
