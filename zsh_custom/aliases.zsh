@@ -32,6 +32,7 @@ fi
 if test $(which nvim); then
   alias vim="nvim"
   alias vi="nvim"
+  alias v="nvim"
 fi
 alias e="$EDITOR"
 # Use trash instead of rm
@@ -77,7 +78,7 @@ alias punycode="idn2"
 alias xq="xmllint --format"
 
 # Vagrant
-alias v="vagrant global-status"
+alias vgs="vagrant global-status"
 alias vup="vagrant up"
 alias vhalt="vagrant halt"
 alias vssh="vagrant ssh"
