@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -e
+
+#
+# Script to check whether a homebrew formula is installed or not
+# How to use: brew-is-formula-installed <formulaname>
+# What will be returned? exitcode 0 or 1
+#
+
+# @TODO: Add option check "-v" for verbose mode aka human readable result https://likegeeks.com/linux-bash-scripting-awesome-guide-part3/#Read-parameters
+# @TODO: Print info if no argument given and exit with higher exit code
+
+# Run check
+brew list --formulae -1 "$1" > /dev/null 2>&1
+
+# Use exit status of last command
+if [ $? -eq 0 ]
+then
+    exit 0
+else
+    printf "Error: $1 IS NOT installed."
+    exit 1
+fi
