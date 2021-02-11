@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+autoload colors is-at-least
+source $HOME/.dotfiles/zsh_custom/shell_colors.zsh
+
 cowsay "Trying to update as much as possible now ...with $(realpath $0)" | lolcat
 
 figlet -f cyberlarge "oh-my-zsh:" | lolcat
@@ -54,6 +57,20 @@ figlet -f cyberlarge "ZSH plugins:" | lolcat
 echo "Starting ZSH plugin updates"
 echo "ZSH-PLUGIN alias-tips" && git --work-tree="$HOME/.dotfiles/zsh_custom/plugins/alias-tips" --git-dir="$HOME/.dotfiles/zsh_custom/plugins/alias-tips/.git" pull
 
+if test $(which gosync); then
+    figlet -f cyberlarge "webdevops/gosync:" | lolcat
+    echo "Check if new version of gosync is available:"
+    GOSYNC_ACTUAL_VERSION=$(gosync version | grep -Eio '\d+(\.\d+)+')
+    GOSYNC_LATEST_VERSION=$(curl --silent "https://api.github.com/repos/webdevops/go-sync/releases/latest" | jq -r .tag_name)
+    if $(is-at-least $GOSYNC_LATEST_VERSION $GOSYNC_ACTUAL_VERSION); then
+        echo "✅ webdevops/gosync version $GOSYNC_ACTUAL_VERSION is the latest. No newer release version found."
+    else
+        echo "🍻 webdevops/gosync needs to be updated from $GOSYNC_ACTUAL_VERSION to $GOSYNC_LATEEST_VERSION"
+        source $HOME/.dotfiles/configscripts/setup-go-sync.sh
+        echo "👍 webdevops/gosync update complete. Installed version is $(gosync version | grep -Eio '\d+(\.\d+)+') now."
+    fi
+    echo "webdevops/gosync update script finished.\n\n"
+fi
 
 ##################################################
 # ToDos for this script
