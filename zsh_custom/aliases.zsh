@@ -11,6 +11,7 @@ alias cpwd="copydir"
 alias mkdir="mkdir -p"
 alias cask="brew cask"
 alias zip="zip -x *.DS_Store -x *__MACOSX* -x *.AppleDouble*"
+alias version-is-at-least="is-at-least"
 # Recursively remove Apple meta files
 alias cleanupds="find . -type f -name '*.DS_Store' -ls -delete"
 alias cleanupad="find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \;"
