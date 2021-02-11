@@ -3,6 +3,7 @@
 # Install script for # https://github.com/webdevops/go-sync/
 
 UNAME=$( command -v uname)
+GOSYNC_BINARY=/usr/local/bin/gosync
 
 case $( "${UNAME}" | tr '[:upper:]' '[:lower:]') in
   linux*)
@@ -32,5 +33,5 @@ DOWNLOAD_VERSION=$GOSYNC_LATEST_VERSION
 DOWNLOAD_OS=$OS
 DOWNLOAD_ARCH=x64
 
-wget -O/usr/local/bin/gosync "https://github.com/webdevops/go-sync/releases/download/${DOWNLOAD_VERSION}/gosync-${DOWNLOAD_OS}-${DOWNLOAD_ARCH}"
-chmod +x /usr/local/bin/gosync
+wget -O$GOSYNC_BINARY "https://github.com/webdevops/go-sync/releases/download/${DOWNLOAD_VERSION}/gosync-${DOWNLOAD_OS}-${DOWNLOAD_ARCH}"
+chmod +x $GOSYNC_BINARY
