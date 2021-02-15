@@ -26,7 +26,6 @@ case $( "${UNAME}" | tr '[:upper:]' '[:lower:]') in
 esac
 
 GOSYNC_LATEST_VERSION=$(curl --silent "https://api.github.com/repos/webdevops/go-sync/releases/latest" | jq -r .tag_name)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_LATEST_VERSION/install.sh | bash
 
 # https://github.com/webdevops/go-sync/releases
 DOWNLOAD_VERSION=$GOSYNC_LATEST_VERSION
