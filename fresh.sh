@@ -88,6 +88,12 @@ source $HOME/.dotfiles/configscripts/setup-nvm.sh
 # Setup webdevops/go-sync
 source $HOME/.dotfiles/configscripts/setup-go-sync.sh
 
+# Setup webdevops/go-devtool
+source $HOME/.dotfiles/configscripts/setup-go-devtool.sh
+
+# Setup webdevops/clitools
+source $HOME/.dotfiles/configscripts/setup-clitools.sh
+
 # Setup BROOT
 source $HOME/.dotfiles/configscripts/setup-broot.sh
 
