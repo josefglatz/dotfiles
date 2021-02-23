@@ -1103,6 +1103,25 @@ fi
 
 
 ###############################################################################
+# Camtasia                                                                    #
+###############################################################################
+APPNAME="camtasia"
+
+~/.dotfiles/bin/brew-is-cask-installed $APPNAME
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+	# get macOS application package of Camtasia due to different version namings
+	APPNAMEUI=$(brew info camtasia --cask --json=v2 | jq '.casks[].artifacts[0][0]' --raw-output)
+	sudo xattr -rd com.apple.quarantine /Applications/$APPNAMEUI
+	echo "\n\nStarting $APPNAMEUI."
+	open -a "$APPNAMEUI"
+	echo "\n\nPlease activate license and setup the software!"
+	echo "\nWhen you're done press enter! The configuration/install process will then be continued"
+	read
+fi
+
+
+###############################################################################
 # Dropbox                                                                     #
 ###############################################################################
 ~/.dotfiles/bin/brew-is-cask-installed dropbox
