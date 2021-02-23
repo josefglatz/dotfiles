@@ -1111,7 +1111,7 @@ APPNAME="camtasia"
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
 	# get macOS application package of Camtasia due to different version namings
-	APPNAMEUI=$(brew info camtasia --cask --json=v2 | jq '.casks[].artifacts[0][0]' --raw-output)
+	APPNAMEUI=$(brew info $APPNAME --cask --json=v2 | jq '.casks[].artifacts[0][0]' --raw-output)
 	sudo xattr -rd com.apple.quarantine /Applications/$APPNAMEUI
 	echo "\n\nStarting $APPNAMEUI."
 	open -a "$APPNAMEUI"
@@ -1389,6 +1389,35 @@ fi
 
 
 ###############################################################################
+# ColorSnapper2 (mas)                                                         #
+###############################################################################
+APPNAMEUI=ColorSnapper2.app
+
+mdfind -name $APPNAMEUI &> /dev/null
+RESULT=$?
+
+if [ $RESULT -eq 0 ]; then
+	read -p "# $APPNAMEUI: Do you want to (re-)configure $APPNAMEUI? [y/n] " -n 1 -r
+	echo    # (optional) move to a new line
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+		echo -e "\n\nStarting $APPNAMEUI for you."
+		open -a "$APPNAMEUI"
+		echo -e "\n\Now setup and configure $APPNAMEUI!"
+		echo -e "\n\nPlease press enter if you finished installing/configuring the software."
+		read
+		# Clear global shortcuts of ColorSnapper2.app
+		defaults write com.koolesache.ColorSnapper2 ColorsAndFormatsShortCut '<62706C69 73743030 D4010203 04050607 0A582476 65727369 6F6E5924 61726368 69766572 5424746F 7058246F 626A6563 74731200 0186A05F 100F4E53 4B657965 64417263 68697665 72D10809 54726F6F 748000A1 0B55246E 756C6C08 111A2429 3237494C 51535500 00000000 00010100 00000000 00000C00 00000000 00000000 00000000 00005B>'
+		defaults write com.koolesache.ColorSnapper2 PickColorShortCut '<62706C69 73743030 D4010203 04050607 0A582476 65727369 6F6E5924 61726368 69766572 5424746F 7058246F 626A6563 74731200 0186A05F 100F4E53 4B657965 64417263 68697665 72D10809 54726F6F 748000A1 0B55246E 756C6C08 111A2429 3237494C 51535500 00000000 00010100 00000000 00000C00 00000000 00000000 00000000 00005B>'
+		# Set default magnification value 
+		defaults write defaults write com.koolesache.ColorSnapper2 magnificationValue -int 12
+		echo -e "\n\n $APPNAMEUI: If you want to enable the app on launch, please activate it in the application's preferences."
+		echo -e "\n\nPlease press enter to continue the setup script."
+		read
+	fi
+fi
+
+###############################################################################
 # Apache                                                                      #
 ###############################################################################
 # Disable builtin httpd (to suppress regular error messages in sys log)
@@ -1424,6 +1453,7 @@ for app in "Activity Monitor" \
 	"Calendar" \
 	"cfprefsd" \
 	"Contacts" \
+	"ColorSnapper2" \
 	"Dock" \
 	"Divvy" \
 	"Elgato Control Center" \
