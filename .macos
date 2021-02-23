@@ -1218,6 +1218,19 @@ if [ $RESULT -eq 0 ]; then
 fi
 
 ###############################################################################
+# Chromium                                                               #
+###############################################################################
+APPNAME="chromium"
+APPNAMEUI="Chromium.app"
+
+~/.dotfiles/bin/brew-is-cask-installed $APPNAME
+RESULT=$?
+
+if [ $RESULT -eq 0 ]; then
+	sudo xattr -rd com.apple.quarantine /Applications/$APPNAMEUI
+fi
+
+###############################################################################
 # Google Chrome Canary                                                        #
 ###############################################################################
 APPNAME="google-chrome-canary"
