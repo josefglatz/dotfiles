@@ -92,3 +92,8 @@ alias vrebuild="vagrant destroy --force && vagrant up"
 # Docker
 alias docker-composer="docker-compose"
 alias d-c="docker-compose"
+
+# Docker dinghy host
+alias d-env-dinghy="eval $(dinghy env)"
+  alias dinghy-eval="d-env-dinghy"
+  alias dinghy-env="d-env-dinghy"
