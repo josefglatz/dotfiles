@@ -18,6 +18,7 @@ alias unstage="git restore --staged ."
 alias cdgr='cd "$(git root)" && echo "Changed directory to actual git root $(pwd)"'
 alias git-config-alias-showall='git config --get-regexp alias'
 alias git-config-global-alias-showall='git config --global --get-regexp alias'
+alias gcamend="git commit --amend"
 #alias wip="commit wip"
 
 # Disable oh-my-zsh git alias
