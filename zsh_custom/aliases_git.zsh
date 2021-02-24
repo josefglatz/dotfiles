@@ -1,4 +1,5 @@
 # Git
+alias git="LANG=C git"
 alias gst="git status"
 alias gb="git branch"
 alias gc="git checkout"
