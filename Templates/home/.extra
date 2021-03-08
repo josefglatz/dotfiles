@@ -35,6 +35,12 @@ SYSTEM_HOSTNAME="maculpa"
 GITHUB_CLI_TOKEN=
 
 
+
+# GitLab CLI (unofficial) configuration https://glab.readthedocs.io/
+GITLAB_TOKEN=
+GITLAB_HOST=
+
+
 # Docker settings
 
 # please set your default docker host settings preset
