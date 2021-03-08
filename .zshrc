@@ -150,6 +150,10 @@ export GITHUB_TOKEN=$GITHUB_CLI_TOKEN
 export DINGHY_GUEST_MOUNT_DIR=$DINGHY_GUEST_MOUNT_DIR
 export DINGHY_HOST_MOUNT_DIR=$DINGHY_HOST_MOUNT_DIR
 
+# Setup docker daemon related environment based on $DOTFILES_ACTIVE_DOCKERHOST (in ~/.extra)
+export DOTFILES_ACTIVE_DOCKERHOST=$DOTFILES_ACTIVE_DOCKERHOST
+dotfiles-dockerhost-activation
+
 # Homebrew: disables statistics that brew collects
 export HOMEBREW_NO_ANALYTICS=1 
 

@@ -43,7 +43,8 @@ GITHUB_CLI_TOKEN=
 #   DOCKER_HOST env var, ...
 #
 #   Possible values support by josefglatz/dotfiles:
-#
+#      - "dinghy" .... when you use codekitchen/dinghy in your macOS env
+#      - "" (empty) .. when you don't want to set anything specific
 DOTFILES_ACTIVE_DOCKERHOST=dinghy
 
 
