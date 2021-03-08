@@ -6,6 +6,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$NVM_LATEST_VERSION/instal
 if [ $RESULT -eq 0 ]; then
     echo "Setup nvm environment" | lolcat
     mkdir ~/.nvm || true
+    nvm install 10
+    nvm install 11
     nvm install 12
     nvm install 13
     nvm install 14
