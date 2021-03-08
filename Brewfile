@@ -308,13 +308,13 @@ cask "sonos"
 cask "snagit" #screencapture #license-needed #productivity #techsmith
 cask "spotify"
 cask "teamviewer"
-cask "tower"
-cask "transmit" # (license needed)
+cask "tower" #license-needed
+cask "transmit" #license-needed
 cask "visual-studio-code"
 cask "vivaldi"
 cask "vlc"
 cask "vnc-viewer"
-cask "whatsize" # (license needed)
+cask "whatsize" #license-needed
 #cask "wireshark"
 
 
