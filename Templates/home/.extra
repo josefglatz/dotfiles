@@ -35,6 +35,17 @@ SYSTEM_HOSTNAME="maculpa"
 GITHUB_CLI_TOKEN=
 
 
+# Docker settings
+
+# please set your default docker host settings preset
+#   With this env var it's possible to set the underlying
+#   default settings for docker, docker-compose like the
+#   DOCKER_HOST env var, ...
+#
+#   Possible values support by josefglatz/dotfiles:
+#
+DOTFILES_ACTIVE_DOCKERHOST=dinghy
+
 
 # DINGHY development environment configuration
 DINGHY_GUEST_MOUNT_DIR="/Volumes/cs"

@@ -43,3 +43,21 @@ alias dcmysql='ct docker:mysql'
 
 # General shortcuts (with up-dir tree searching)
 alias make='ct make'
+
+# Create aliases for switching PHP version when using Homebrew's php packages
+#
+#   Usage: type `7.2` and press enter for switching to homebrew's php-package: php@7.2
+installedPhpVersions=($(brew ls --versions | ggrep -E 'php(@.*)?\s' | ggrep -oP '(?<=\s)\d\.\d' | uniq | sort))
+for phpVersion in ${installedPhpVersions[*]}; do
+    value="{"
+
+    for otherPhpVersion in ${installedPhpVersions[*]}; do
+        if [ "${otherPhpVersion}" != "${phpVersion}" ]; then
+            value="${value} brew unlink php@${otherPhpVersion};"
+        fi
+    done
+
+    value="${value} brew link php@${phpVersion} --force --overwrite; } &> /dev/null && php -v"
+
+    alias "${phpVersion}"="${value}"
+done
