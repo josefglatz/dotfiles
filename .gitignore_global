@@ -50,8 +50,11 @@ Icon
 # Logs and databases #
 ######################
 *.log
-*.sql
 *.sqlite
+*.sql
+# do not exclude known TYPO3 related used sql files
+!ext_tables.sql
+!ext_tables_static+adt.sql
 
 # Directories potentially created on remote AFP share
 .AppleDB
