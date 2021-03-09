@@ -31,6 +31,8 @@ if test $(which secure-pbcopy); then
   alias spbcopy="secure-pbcopy"
   alias pbcopysecure="secure-pbcopy"
 fi
+# Get SSH public key from private key file
+alias ssh-getpublickey-from-privatekey="ssh-keygen -y  -e -f"
 # Use gnu-sed instead of BSD's sed
 if test $(which gsed); then
   alias sed="gsed"
