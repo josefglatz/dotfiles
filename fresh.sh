@@ -105,6 +105,12 @@ echo "\n\nVagrant setup script finished"
 source $HOME/.dotfiles/configscripts/setup-zshplugin-alias-tips.sh
 echo "\n\nZSH plugin alias-tips setup script finished"
 
+# Setup secure-pbcopy
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	echo "\n\nInstall secure-pbcopy command (open source project https://github.com/alyssais/secure-pbcopy)"
+	source $HOME/.dotfiles/configscripts/setup-secure-pbcopy.sh
+fi
+
 # Setup gnu-bin symlinks (partially gBINARY symlinks)
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	echo "\n\nCreate symlinks for gnu-bin binaries"

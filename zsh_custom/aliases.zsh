@@ -27,6 +27,11 @@ alias displays="system_profiler SPDisplaysDataType"
 alias cpu="sysctl -n machdep.cpu.brand_string"
 alias ram="top -l 1 -s 0 | grep PhysMem"
 # Use gnu-sed instead of BSD's sed
+if test $(which secure-pbcopy); then
+  alias spbcopy="secure-pbcopy"
+  alias pbcopysecure="secure-pbcopy"
+fi
+# Use gnu-sed instead of BSD's sed
 if test $(which gsed); then
   alias sed="gsed"
 fi
