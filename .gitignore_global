@@ -129,6 +129,8 @@ Session.vim
 # Personal
 # # --------------------------------------------------------------------------------------------
 Retrospektive.md
+Retrospective.md
+Diary.md
 
 # See other ressources for possible global gitignore
 # https://github.com/sobolevn/dotfiles/blob/master/config/gitignore
