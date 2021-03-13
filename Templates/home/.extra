@@ -50,7 +50,7 @@ GITLAB_HOST=
 #
 #   Possible values support by josefglatz/dotfiles:
 #      - "dinghy" .... when you use codekitchen/dinghy in your macOS env
-#      - "" (empty) .. when you don't want to set anything specific
+#      - "" (empty) .. when you don't want to set anything specific (and want to use Docker Desktop for Mac (with ddev, ...))
 DOTFILES_ACTIVE_DOCKERHOST=dinghy
 
 
