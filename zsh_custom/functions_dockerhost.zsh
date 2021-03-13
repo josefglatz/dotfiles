@@ -3,7 +3,7 @@ dotfiles-dockerhost-activation () {
     if [ -z "$DOTFILES_ACTIVE_DOCKERHOST" ]
     then
         # Inform the user that no specific docker daemon configuration is set
-        echo "${BLUE}No specific docker daemon configuration loaded."
+        echo "${GREEN}No specific docker daemon configuration loaded.${RESET} No dinghy and no special docker. Have fun with 🐬 Docker Desktop for Mac!"
     else
         if [ "$DOTFILES_ACTIVE_DOCKERHOST" = "dinghy" ]
             then
