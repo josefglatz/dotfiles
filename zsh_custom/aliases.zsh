@@ -52,6 +52,10 @@ if test $(which prettyping); then
   alias ping="prettyping"
   alias ping6="prettyping -6"
 fi
+if test $(which mkcert); then
+  alias httpmk="http --verify=\"$(mkcert --CAROOT)/rootCA.pem\""
+fi
+
 
 # Workaround to allow aliases in sudo mode (A trailing space in VALUE causes the next word to be checked for alias substitution when the alias is expanded.)
 alias sudo="sudo "
