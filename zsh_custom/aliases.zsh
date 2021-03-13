@@ -108,3 +108,6 @@ alias d-c="docker-compose"
 alias d-env-dinghy="eval $(dinghy env)"
   alias dinghy-eval="d-env-dinghy"
   alias dinghy-env="d-env-dinghy"
+
+# Reset known docker specifc environment variables
+alias d-env-reset="unset DOCKER_CERT_PATH; unset DOCKER_HOST; unset DOCKER_TLS_VERIFY;"
