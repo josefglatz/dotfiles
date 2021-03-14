@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+
+#
+# Script to change docker host setting and updating DOTFILES_ACTIVE_DOCKERHOST
+#
+
+HEIGHT=15
+WIDTH=70
+CHOICE_HEIGHT=4
+BACKTITLE="josefglatz/dotfiles"
+TITLE="Set docker context and update DOTFILES_ACTIVE_DOCKERHOST"
+MENU="Choose one of the following options:"
+
+OPTIONS=(1 "Leave current configuration \"$DOTFILES_ACTIVE_DOCKERHOST\""
+         2 "Use codekitchen/dinghy"
+         3 "Use parallels docker vm"
+         4 "Unset (use Docker Desktop for Mac or specific docker context)")
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+        1)
+            echo -e "No changes! We leave everything as it is 💖\n"
+            EXITCODE=0
+            ;;
+        2)
+            echo "Using docker commands to communicate with codekitchen/dinghy 🐬 docker host now!"
+            sed -i -e 's/DOTFILES_ACTIVE_DOCKERHOST.*/DOTFILES_ACTIVE_DOCKERHOST=dinghy/' $HOME/.extra
+            export DOTFILES_ACTIVE_DOCKERHOST=dinghy
+            eval $(dinghy env)
+            
+            EXITCODE=0
+            ;;
+        3)
+            echo "Using docker commands to communicate with my custom linux vm's 🐬 docker host now!"
+            #export DOTFILES_ACTIVE_DOCKERHOST=parallels-linux-docker-vm
+            EXITCODE=1
+            ;;
+        4)
+            echo "Known DOCKER_ environment variables unset now! Looks like you're using Docker Desktop for Mac now 💖"
+            sed -i -e 's/DOTFILES_ACTIVE_DOCKERHOST.*/DOTFILES_ACTIVE_DOCKERHOST=/' $HOME/.extra
+            export DOTFILES_ACTIVE_DOCKERHOST=
+            unset DOCKER_CERT_PATH; unset DOCKER_HOST; unset DOCKER_TLS_VERIFY;
+            
+            EXITCODE=0
+            ;;
+esac 
+
+DOCKER_ENVIRONMENT_VARIABLES=$(export | grep --color -e "^DOCKER")
+DOCKER_ENVIRONMENT_VARIABLES=$(echo "$DOCKER_ENVIRONMENT_VARIABLES" | grep -v "DOCKER_MACHINE_NAME")
+if [ -z "$DOCKER_ENVIRONMENT_VARIABLES" ]
+then
+      return $EXITCODE
+else
+      bat <(echo "DOCKER CONTEXT related variables active in your shell environment:\n\n$DOCKER_ENVIRONMENT_VARIABLES")
+fi
+
+return $EXITCODE

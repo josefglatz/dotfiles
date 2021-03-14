@@ -111,3 +111,5 @@ alias d-env-dinghy="eval $(dinghy env)"
 
 # Reset known docker specifc environment variables
 alias d-env-reset="unset DOCKER_CERT_PATH; unset DOCKER_HOST; unset DOCKER_TLS_VERIFY;"
+
+alias dockerhost=". $DOTFILES/bin/dockerhost"
