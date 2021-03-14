@@ -80,7 +80,7 @@ source ./configscripts/setup-gitconfig.sh
 
 # Set preferences by symlink for following tools
 # nano, postgresql, sqlite
-ln -snf $HOME/.dotfiles/{.nanorc,.psqlrc,.sqliterc} $HOME/
+ln -snf $HOME/.dotfiles/{.nanorc,.psqlrc,.sqliterc,.dialogrc} $HOME/
 
 # Setup NVM
 source $HOME/.dotfiles/configscripts/setup-nvm.sh
