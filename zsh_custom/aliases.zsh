@@ -109,6 +109,11 @@ alias d-env-dinghy="eval $(dinghy env)"
   alias dinghy-eval="d-env-dinghy"
   alias dinghy-env="d-env-dinghy"
 
+# codekitchen/dinghy aliases for regular used commands
+alias dis="dinghy status"
+alias diu="dinghy up"
+alias dih="dinghy halt"
+
 # Reset known docker specifc environment variables
 alias d-env-reset="unset DOCKER_CERT_PATH; unset DOCKER_HOST; unset DOCKER_TLS_VERIFY;"
 
