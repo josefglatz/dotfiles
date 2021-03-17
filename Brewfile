@@ -36,6 +36,7 @@ cask "rar" # rar archiving tool (alternative to former unrar formulae)
 brew "asciinema" # Record your terminal
 #brew "autojump" # Older alternative to fasd and other alternative to z.sh
 brew "gh" # Official GitHub CLI
+brew "glab" # GitLab CLI https://glab.readthedocs.io/
 brew "wget"
 brew "pygments"
 brew "multitail" # Like tail for multiple log files
