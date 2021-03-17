@@ -279,7 +279,6 @@ cask "handbrake"
 cask "gpg-suite" # (licenense needed)
 cask "imagealpha" # UI based image compressing tool (pngquant)
 cask "jetbrains-toolbox"
-cask "jasper" # GitHub issue reader GUI
 cask "ksdiff" # Kaleidoscope helper because I've purchased it via App Store
 #cask "little-snitch" # personal firewall (license needed)
 cask "macdown" # free markdown UI editor
