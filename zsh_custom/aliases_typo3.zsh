@@ -3,7 +3,7 @@
 #
 
 # composer update typo3/cms core packages in an existing project
-alias typo3-composer-update-core-packages="composer u typo3/cms-* --with-all-dependencies"
+alias typo3-composer-update-core-packages="composer u 'typo3/cms-*' --with-all-dependencies"
 
 
 #
