@@ -1025,6 +1025,20 @@ then
 	read
 fi
 
+
+###############################################################################
+# SnapCam                                                                     #
+###############################################################################
+# @TODO: check homebrew availability for Snapchat's Snap Camera
+read -p "Do you want to install Snap Camera.app manually? [y/n] " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	open https://snapcamera.snapchat.com/download/
+	echo "\n\nPlease press enter if you want to continue configuration/install process"
+	read
+fi
+
 ###############################################################################
 # Spotify                                                                     #
 ###############################################################################
