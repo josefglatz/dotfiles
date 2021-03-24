@@ -103,6 +103,8 @@ alias vrebuild="vagrant destroy --force && vagrant up"
 # Docker
 alias docker-composer="docker-compose"
 alias d-c="docker-compose"
+alias dps="docker ps"
+  alias d-ps="docker ps"
 
 # Docker dinghy host
 alias d-env-dinghy="eval $(dinghy env)"
