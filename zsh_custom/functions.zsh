@@ -75,7 +75,7 @@ if test $(which fzf); then
       echo "Need a string to search for!";
       return 1;
     fi
-    rg --files-with-matches --no-messages "$1" | fzf $FZF_PREVIEW_WINDOW --preview "rg --ignore-case --pretty --context 10 '$1' {}"
+    rg --hidden --files-with-matches --no-messages "$1" | fzf $FZF_PREVIEW_WINDOW --preview "rg --ignore-case --pretty --context 10 '$1' {}"
   }
   alias find-in-file="fif"
 
