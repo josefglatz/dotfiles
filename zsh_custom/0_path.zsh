@@ -7,6 +7,9 @@ pathAppend() {
   fi
 }
 
+# Export golang path as this is a requirement
+export GOPATH="$HOME/.golang"
+
 export PATH="/usr/local/sbin:$PATH"
 
 # Add dotfiles' bin folder
@@ -20,6 +23,9 @@ export PATH="$HOME/.node/bin:$PATH"
 
 # add rust compiled binaries
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# add golang compiled binaries
+export PATH="$GOPATH/bin:$PATH"
 
 # Make sure coreutils are loaded before system commands
 # I've disabled this for now because I only use "ls" which is
