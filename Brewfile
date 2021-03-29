@@ -118,7 +118,7 @@ brew "iperf3"
 brew "mackup"
 brew "pkg-config"
 brew "trash"
-brew "jq"
+brew "jq" # Parser for json #parser
 brew "lame"
 brew "lingon-x" #macos #helpertool #license-needed
 brew "libidn" # command-line tool to encode/decode punycode (domains)
@@ -248,7 +248,7 @@ cask "vagrant"
 # Apps
 cask "1password"
 cask "1password-cli"
-cask "alfred"
+cask "alfred" # #productivity
 cask "bartender"
 cask "bettertouchtool" # Improve all your touch devices #license-needed
 cask "camtasia" #screencapture #video #license-needed #productivity #techsmith
@@ -278,7 +278,7 @@ cask "go64" # Check for 32/64bit apps on your macOS system
 cask "google-chrome"
 cask "google-chrome-canary" #webdevelopment #webdesign
 cask "handbrake"
-cask "gpg-suite" # (licenense needed)
+cask "gpg-suite" # #license-needed
 cask "imagealpha" # UI based image compressing tool (pngquant)
 cask "jetbrains-toolbox"
 cask "ksdiff" # Kaleidoscope helper because I've purchased it via App Store
@@ -296,7 +296,7 @@ cask "paw" # API tool for Mac (license needed)
 cask "pennywise"
 cask "prepros" # FE pipeline compiler (redmine abacus theme related) #projectspecific
 cask "parallels" #license-needed #virtualization #hypervisor
-cask "responsively" # Multiple browser viewports to test RWD
+cask "responsively" # Multiple browser viewports to test RWD #browser
 cask "rightfont" # (license needed)
 cask "safari-technology-preview"
 cask "sequel-pro" # #dev #dev-database
