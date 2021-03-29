@@ -81,6 +81,7 @@ brew "frei0r" # Minimalistic plugin API for video effects
 brew "fribidi"
 brew "fzf" # Command-line fuzzy finder written in Go
 brew "gawk"
+brew "gallery-dl" # gallery-dl is a command-line program to download image galleries and collections #productivity #download #images #bulk #batch
 brew "gcc"
 brew "gd"
 brew "gettext"
